@@ -1,45 +1,41 @@
 export default async (request: Request) => {
   const url = new URL(request.url);
-  const pathname = url.pathname;
 
-  // Mapping of path prefixes to their respective Netlify project URLs
-  const routeMap: Record<string, string> = {
-    '/acecms': 'https://acecms.netlify.app',
-    '/web-development': 'https://acecrm.netlify.app',
-    '/aceerp': 'https://aceerp.netlify.app'
-  };
+  const path = ['https://acecms.netlify.app', 'https://project2-site.netlify.app']
+  // List of supported product path prefixes
+  const supportedPrefixes = ['/acecms', '/web-development', '/acemrp', '/aceplm'];
 
-  // Match the request path to a known base route
-  const matchedBase = Object.keys(routeMap).find(prefix =>
-    pathname.startsWith(prefix)
-  );
+  // Find the matching prefix
+  const matchedPrefix = supportedPrefixes.find(prefix => url.pathname.startsWith(prefix));
 
-  // If no match found, return 404
-  if (!matchedBase) {
+  if (!matchedPrefix) {
     return new Response('Not Found', { status: 404 });
   }
 
-  // Construct the target URL
-  const targetDomain = routeMap[matchedBase];
-  const targetPath = pathname.replace(matchedBase, '');
-  const targetUrl = `${targetDomain}${matchedBase}${targetPath}${url.search}`;
+  // Remove the prefix and prepare the target path
+  const targetPath = url.pathname.replace(matchedPrefix, '');
 
-  // Proxy the request to the appropriate Netlify project
+  // Use the matchedPrefix (without slash) as subfolder
+  const subfolder = matchedPrefix.replace('/', ''); // e.g., 'acecms'
+
+  const targetUrl = `${path}/${subfolder}${targetPath}${url.search}`;
+
   return fetch(targetUrl, {
     method: request.method,
     headers: request.headers,
-    body: ['GET', 'HEAD'].includes(request.method) ? undefined : request.body
+    body: ['GET', 'HEAD'].includes(request.method) ? undefined : request.body,
   });
 };
 
-// Register all route prefixes
 export const config = {
   path: [
     '/acecms',
     '/acecms/*',
     '/web-development',
     '/web-development/*',
-    '/aceerp',
-    '/aceerp/*'
-  ]
+    '/acemrp',
+    '/acemrp/*',
+    '/aceplm',
+    '/aceplm/*'
+  ],
 };
