@@ -15,12 +15,12 @@ const keywordRedirectMap: Record<string, string> = {
   'cms': 'https://home.acecms.in',
   // 'project': 'https://project.acesoftcloud.in',
   // 'crm': 'https://crm.acesoftcloud.in',
-  'production-management-system': '/ace-production-management-system',
-  'payroll': '/ace-profit-stand-alone-payroll',
-  'ppap': '/ace-profit-ppap',
-  'fixed-asset-management': '/ace-fixed-asset-management-on-cloud',
-  'hrms': '/ace-profit-stand-alone-hrms',
-  'erp': '/ace-profit-erp',
+  'production-management-system': '/products/ace-production-management-system',
+  'payroll': '/products/ace-profit-stand-alone-payroll',
+  'ppap': '/products/ace-profit-ppap',
+  'fixed-asset-management': '/products/ace-fixed-asset-management-on-cloud',
+  'hrms': '/products/ace-profit-stand-alone-hrms',
+  'erp': '/products/ace-profit-erp',
 };
 
 const knownPaths = new Set([
@@ -34,6 +34,7 @@ const knownPaths = new Set([
   '/login',
   '/user',
   '/videos',
+  '/web-development'
 ]);
 
 function isSkippable(pathname: string): boolean {
