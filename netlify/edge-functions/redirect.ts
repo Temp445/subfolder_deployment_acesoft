@@ -10,7 +10,7 @@ export default async (request: Request) => {
     targetDomain = 'https://project2-site.netlify.app';
     basePath = '/web-development';
   } else if (pathname.startsWith('/acecms')) {
-    targetDomain = 'https://project3-site.netlify.app';
+    targetDomain = 'https://acecms.netlify.app';
     basePath = '/acecms';
   } else {
     return new Response('Not Found', { status: 404 });

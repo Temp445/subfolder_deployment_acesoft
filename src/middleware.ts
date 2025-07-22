@@ -11,7 +11,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 
 const keywordRedirectMap: Record<string, string> = {
     'calibration': 'https://home.acecms.in', // '/products/v1/ace-calibration-management-system-on-cloud',
-  'acecms': 'https://home.acecms.in',
+  // 'acecms': 'https://home.acecms.in',
   'cms': 'https://home.acecms.in',
   // 'project': 'https://project.acesoftcloud.in',
   // 'crm': 'https://crm.acesoftcloud.in',
@@ -34,7 +34,8 @@ const knownPaths = new Set([
   '/login',
   '/user',
   '/videos',
-  '/web-development'
+  '/web-development',
+  '/acecms'
 ]);
 
 function isSkippable(pathname: string): boolean {
@@ -88,7 +89,7 @@ export function middleware(request: NextRequest) {
   }
 
   const basePath = stripLocale(pathname);
-  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') ||  pathname.startsWith('/web-development/') )
+  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') ||  pathname.startsWith('/web-development/') || pathname.startsWith('/acecms/') )
     {
     return response || NextResponse.next();
   }
