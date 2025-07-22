@@ -1,24 +1,26 @@
 export default async (request: Request) => {
   const url = new URL(request.url);
 
-  const path = ['https://acecms.netlify.app', 'https://project2-site.netlify.app']
-  // List of supported product path prefixes
-  const supportedPrefixes = ['/acecms', '/web-development', '/acemrp', '/aceplm'];
+  // Map each product prefix to its target domain
+  const productMap: Record<string, string> = {
+    '/acecms': 'https://acecms.netlify.app',
+    '/web-development': 'https://project2-site.netlify.app',
+    '/acemrp': 'https://acemrp.netlify.app',
+    '/aceplm': 'https://aceplm.netlify.app',
+  };
 
-  // Find the matching prefix
-  const matchedPrefix = supportedPrefixes.find(prefix => url.pathname.startsWith(prefix));
+  // Find the matched prefix
+  const matchedPrefix = Object.keys(productMap).find(prefix =>
+    url.pathname.startsWith(prefix)
+  );
 
   if (!matchedPrefix) {
     return new Response('Not Found', { status: 404 });
   }
 
-  // Remove the prefix and prepare the target path
-  const targetPath = url.pathname.replace(matchedPrefix, '');
-
-  // Use the matchedPrefix (without slash) as subfolder
-  const subfolder = matchedPrefix.replace('/', ''); // e.g., 'acecms'
-
-  const targetUrl = `${path}/${subfolder}${targetPath}${url.search}`;
+  const targetBase = productMap[matchedPrefix];
+  const internalPath = url.pathname.replace(matchedPrefix, '');
+  const targetUrl = `${targetBase}${matchedPrefix}${internalPath}${url.search}`;
 
   return fetch(targetUrl, {
     method: request.method,

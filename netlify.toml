@@ -5,11 +5,10 @@ publish = ".next"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-# Register Edge Function for each product path
+# Edge Function routes
 [[edge_functions]]
 function = "redirect"
 path = "/acecms"
-
 [[edge_functions]]
 function = "redirect"
 path = "/acecms/*"
@@ -17,7 +16,6 @@ path = "/acecms/*"
 [[edge_functions]]
 function = "redirect"
 path = "/web-development"
-
 [[edge_functions]]
 function = "redirect"
 path = "/web-development/*"
@@ -25,7 +23,6 @@ path = "/web-development/*"
 [[edge_functions]]
 function = "redirect"
 path = "/acemrp"
-
 [[edge_functions]]
 function = "redirect"
 path = "/acemrp/*"
@@ -33,7 +30,6 @@ path = "/acemrp/*"
 [[edge_functions]]
 function = "redirect"
 path = "/aceplm"
-
 [[edge_functions]]
 function = "redirect"
 path = "/aceplm/*"
