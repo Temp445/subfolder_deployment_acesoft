@@ -1,25 +1,8 @@
 export default async (request: Request) => {
   const url = new URL(request.url);
-  const pathname = url.pathname;
 
-  let targetDomain = '';
-  let basePath = '';
-  let targetPath = '';
-
-  if (pathname.startsWith('/web-development')) {
-    targetDomain = 'https://project2-site.netlify.app';
-    basePath = '/web-development';
-  } else if (pathname.startsWith('/acecms')) {
-    targetDomain = 'https://acecms.netlify.app';
-    basePath = '/acecms';
-  } else {
-    return new Response('Not Found', { status: 404 });
-  }
-
-  // Remove basePath from original pathname
-  targetPath = pathname.replace(basePath, '');
-
-  const targetUrl = `${targetDomain}${basePath}${targetPath}${url.search}`;
+  const targetPath = url.pathname.replace(/^\/acecms/, ''); 
+  const targetUrl = `https://acecms.netlify.app/acecms/${targetPath}${url.search}`;
 
   return fetch(targetUrl, {
     method: request.method,
@@ -29,10 +12,5 @@ export default async (request: Request) => {
 };
 
 export const config = {
-  path: [
-    '/web-development',
-    '/web-development/*',
-    '/acecms',
-    '/acecms/*'
-  ]
+  path: ['/acecms', '/acecms/*'],
 };
