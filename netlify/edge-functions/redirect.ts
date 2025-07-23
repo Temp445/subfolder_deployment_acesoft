@@ -1,31 +1,10 @@
-// deno-lint-ignore require-await
+// deno-lint-ignore-file
 export default async (request: Request) => {
   const url = new URL(request.url);
-  const pathname = url.pathname;
 
-  // Define multiple basePath => targetSite mappings
-  const routes: Record<string, string> = {
-    '/web-development': 'https://project2-site.netlify.app/web-development',
-    '/acecms': 'https://acecms.netlify.app/acecms',
-    '/graphic-design': 'https://design-site.netlify.app/graphic-design',
-  };
+  const targetPath = url.pathname.replace(/^\/web-development/, ''); 
+  const targetUrl = `https://project2-site.netlify.app/web-development/${targetPath}${url.search}`;
 
-  // Find matching base path
-  const matchedBasePath = Object.keys(routes).find(base =>
-    pathname.startsWith(base)
-  );
-
-  if (!matchedBasePath) {
-    return new Response('Not Found', { status: 404 });
-  }
-
-  const targetBaseUrl = routes[matchedBasePath];
-
-  // Remove the base path to get the subpath
-  const subPath = pathname.replace(matchedBasePath, '');
-  const targetUrl = `${targetBaseUrl}${subPath}${url.search}`;
-
-  // Proxy the request to the target site
   return fetch(targetUrl, {
     method: request.method,
     headers: request.headers,
@@ -34,12 +13,5 @@ export default async (request: Request) => {
 };
 
 export const config = {
-  path: [
-    '/web-development',
-    '/web-development/*',
-    '/acecms',
-    '/acecms/*',
-    '/graphic-design',
-    '/graphic-design/*',
-  ],
+  path: ['/web-development', '/web-development/*'],
 };
