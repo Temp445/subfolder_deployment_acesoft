@@ -12,7 +12,6 @@ export default async (request: Request) => {
     if (!targetPath || targetPath === '') {
       targetPath = '/';
     }
-    // REPLACE THESE WITH YOUR ACTUAL SITE URLS
     targetUrl = `https://project2-site.netlify.app/web-development${targetPath}`;
     if (url.search) {
       targetUrl += url.search;
@@ -22,14 +21,17 @@ export default async (request: Request) => {
     if (!targetPath || targetPath === '') {
       targetPath = '/';
     }
-    // REPLACE THESE WITH YOUR ACTUAL SITE URLS  
     targetUrl = `https://acecms.netlify.app/acecms${targetPath}`;
     if (url.search) {
       targetUrl += url.search;
     }
   } else {
     console.log('No matching path found for:', pathname);
-    return new Response('Not Found - Edge Function Working', { status: 404 });
+    console.log('Available paths: /web-development, /web-development/*, /acecms, /acecms/*');
+    return new Response(`Path "${pathname}" not found. Edge Function Working. Available: /web-development, /acecms`, { 
+      status: 404,
+      headers: { 'Content-Type': 'text/plain' }
+    });
   }
 
   // First check if target site exists
