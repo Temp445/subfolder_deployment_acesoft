@@ -1,8 +1,19 @@
 export default async (request: Request) => {
   const url = new URL(request.url);
+  const pathname = url.pathname;
 
-  const targetPath = url.pathname.replace(/^\/web-development/, ''); 
-  const targetUrl = `https://project2-site.netlify.app/web-development/${targetPath}${url.search}`;
+  let targetUrl;
+
+  if (pathname.startsWith('/web-development')) {
+    const targetPath = pathname.replace(/^\/web-development/, '');
+    targetUrl = `https://project2-site.netlify.app/web-development${targetPath}${url.search}`;
+  } else if (pathname.startsWith('/mobile-development')) {
+    const targetPath = pathname.replace(/^\/mobile-development/, '');
+    targetUrl = `https://project2-site.netlify.app/mobile-development${targetPath}${url.search}`;
+  } else {
+    // Fallback or error handling
+    return new Response('Not Found', { status: 404 });
+  }
 
   return fetch(targetUrl, {
     method: request.method,
@@ -12,5 +23,10 @@ export default async (request: Request) => {
 };
 
 export const config = {
-  path: ['/web-development', '/web-development/*'],
+  path: [
+    '/web-development', 
+    '/web-development/*',
+    '/mobile-development',
+    '/mobile-development/*'
+  ],
 };
