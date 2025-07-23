@@ -98,8 +98,7 @@ import { useTranslations } from "next-intl";
 
             <div className="group">
               <Link
-                href="https://project.acesoftcloud.in/"
-                target="_blank"
+                href="/ace-project"
                 className="flex items-center text-[#2b2d42] border border-teal-50 rounded-t-md rounded-l-md text-sm font-semibold relative px-3 py-1  transition-all duration-300 ease-in-out  hover:border-black hover:bg-white  hover:scale-105"
               >
                 Project

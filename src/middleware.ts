@@ -10,7 +10,7 @@ const allowedRegions = [
 const intlMiddleware = createIntlMiddleware(routing);
 
 const keywordRedirectMap: Record<string, string> = {
-    'calibration': 'https://home.acecms.in', // '/products/v1/ace-calibration-management-system-on-cloud',
+    'calibration': 'https://home.acecms.in', 
   // 'acecms': 'https://home.acecms.in',
   'cms': 'https://home.acecms.in',
   // 'project': 'https://project.acesoftcloud.in',
@@ -21,6 +21,8 @@ const keywordRedirectMap: Record<string, string> = {
   'fixed-asset-management': '/products/ace-fixed-asset-management-on-cloud',
   'hrms': '/products/ace-profit-stand-alone-hrms',
   'erp': '/products/ace-profit-erp',
+  'project': '/ace-project',
+  'aceproject': '/ace-project',
 };
 
 const knownPaths = new Set([
@@ -89,16 +91,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  const basePath = stripLocale(pathname);
-  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') ||  pathname.startsWith('/web-development/') || pathname.startsWith('/acecms/') || pathname.startsWith('/ace-project/') )
-    {
-    return response || NextResponse.next();
-  }
+  
 
   const redirectTo = getRedirectFromKeyword(pathname);
   if (redirectTo) {
     console.log(`[middleware] Keyword redirect → ${redirectTo}`);
     return NextResponse.redirect(new URL(redirectTo, request.url));
+  }
+
+  const basePath = stripLocale(pathname);
+  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') || pathname.startsWith('/acecms/') || pathname.startsWith('/ace-project/') )
+    {
+    return response || NextResponse.next();
   }
 
   // Unknown path. Redirecting to /
