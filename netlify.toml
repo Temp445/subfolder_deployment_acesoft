@@ -1,3 +1,4 @@
+
 [build]
 command = "npm run build"
 publish = ".next"
@@ -5,18 +6,7 @@ publish = ".next"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-[[edge_functions]]
-function = "redirect"
-path = "/web-development"
 
 [[edge_functions]]
 function = "redirect"
-path = "/web-development/*"
-
-[[edge_functions]]
-function = "redirect"
-path = "/acecms"
-
-[[edge_functions]]
-function = "redirect"
-path = "/acecms/*"
+path = "/ace-project/*"
