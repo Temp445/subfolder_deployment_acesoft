@@ -1,19 +1,8 @@
-// deno-lint-ignore-file
 export default async (request: Request) => {
   const url = new URL(request.url);
-  let targetUrl: string | null = null;
 
-  if (url.pathname.startsWith('/web-development')) {
-    const targetPath = url.pathname.replace(/^\/web-development/, '');
-    targetUrl = `https://project2-site.netlify.app/web-development${targetPath}${url.search}`;
-  } else if (url.pathname.startsWith('/acecms')) {
-    const targetPath = url.pathname.replace(/^\/acecms/, '');
-    targetUrl = `https://acecms.netlify.app/web-development${targetPath}${url.search}`;
-  }
-
-  if (!targetUrl) {
-    return new Response('Not found', { status: 404 });
-  }
+  const targetPath = url.pathname.replace(/^\/web-development/, ''); 
+  const targetUrl = `https://project2-site.netlify.app/web-development/${targetPath}${url.search}`;
 
   return fetch(targetUrl, {
     method: request.method,
@@ -23,5 +12,5 @@ export default async (request: Request) => {
 };
 
 export const config = {
-  path: ['/web-development', '/web-development/*', '/acecms', '/acecms/*'],
+  path: ['/web-development', '/web-development/*'],
 };
