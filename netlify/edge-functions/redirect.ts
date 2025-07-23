@@ -2,71 +2,66 @@ export default async (request: Request) => {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
+  console.log('Edge function triggered for:', pathname); // Debug log
+
   let targetUrl;
   let targetPath;
 
-  if (pathname.startsWith('/web-development')) {
+  if (pathname === '/web-development' || pathname.startsWith('/web-development/')) {
     targetPath = pathname.replace(/^\/web-development/, '');
-    // Ensure path starts with / and handle empty path
+    // Handle root path
     if (!targetPath || targetPath === '') {
       targetPath = '/';
-    } else if (!targetPath.startsWith('/')) {
-      targetPath = '/' + targetPath;
     }
     targetUrl = `https://project2-site.netlify.app/web-development${targetPath}`;
-    // Add search params if they exist
     if (url.search) {
       targetUrl += url.search;
     }
-  } else if (pathname.startsWith('/mobile-development')) {
+  } else if (pathname === '/mobile-development' || pathname.startsWith('/mobile-development/')) {
     targetPath = pathname.replace(/^\/mobile-development/, '');
-    // Ensure path starts with / and handle empty path  
+    // Handle root path
     if (!targetPath || targetPath === '') {
       targetPath = '/';
-    } else if (!targetPath.startsWith('/')) {
-      targetPath = '/' + targetPath;
     }
     targetUrl = `https://mobile-project-site.netlify.app${targetPath}`;
-    // Add search params if they exist
     if (url.search) {
       targetUrl += url.search;
     }
   } else {
+    console.log('No matching path found for:', pathname);
     return new Response('Not Found', { status: 404 });
   }
 
   try {
-    console.log('Fetching:', targetUrl); // Debug log
+    console.log('Fetching:', targetUrl);
     
-    // Create new headers object to avoid issues with immutable headers
-    const headers = new Headers();
-    for (const [key, value] of request.headers.entries()) {
-      // Skip headers that might cause issues in production
-      if (!['host', 'connection', 'upgrade-insecure-requests'].includes(key.toLowerCase())) {
-        headers.set(key, value);
-      }
-    }
-
     const response = await fetch(targetUrl, {
       method: request.method,
-      headers: headers,
-      body: ['GET', 'HEAD'].includes(request.method) ? undefined : await request.clone().arrayBuffer(),
+      headers: {
+        'User-Agent': request.headers.get('User-Agent') || 'Netlify Edge Function',
+        'Accept': request.headers.get('Accept') || 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': request.headers.get('Accept-Language') || 'en-US,en;q=0.5',
+      },
+      body: ['GET', 'HEAD'].includes(request.method) ? undefined : request.body,
     });
 
-    // Create response with proper headers
-    const responseHeaders = new Headers(response.headers);
-    responseHeaders.delete('x-frame-options'); // Remove if causing issues
-    
+    console.log('Response status:', response.status);
+
+    if (!response.ok) {
+      console.log('Target responded with error:', response.status);
+      return new Response(`Target site error: ${response.status}`, { status: response.status });
+    }
+
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
-      headers: responseHeaders,
+      headers: response.headers,
     });
 
   } catch (error) {
     console.error('Edge function error:', error);
     console.error('Target URL was:', targetUrl);
-    return new Response('Internal Server Error', { status: 500 });
+    return new Response(`Proxy Error: ${error.message}`, { status: 502 });
   }
 };
 
