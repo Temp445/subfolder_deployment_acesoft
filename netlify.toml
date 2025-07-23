@@ -15,8 +15,8 @@ path = "/web-development/*"
 
 [[edge_functions]]
 function = "redirect"
-path = "/mobile-development"
+path = "/acecms"
 
 [[edge_functions]]
 function = "redirect"
-path = "/mobile-development/*"
+path = "/acecms/*"
