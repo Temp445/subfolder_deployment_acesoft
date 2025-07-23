@@ -18,9 +18,9 @@ const allowedRegions = [
 const intlMiddleware = createIntlMiddleware(routing);
 
 const keywordRedirectMap: Record<string, string> = {
-    'calibration': 'https://home.acecms.in', 
+    // 'calibration': 'https://home.acecms.in', 
   // 'acecms': 'https://home.acecms.in',
-  'cms': 'https://home.acecms.in',
+  // 'cms': 'https://home.acecms.in',
   // 'project': 'https://project.acesoftcloud.in',
   // 'crm': 'https://crm.acesoftcloud.in',
   'production-management-system': '/products/ace-production-management-system',

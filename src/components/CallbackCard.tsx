@@ -44,9 +44,9 @@ export default function CallbackCard() {
             </h2>
             <p className="text-sm mb-4">{t('Subtitle')} </p>
             <button
-              onClick={() => handleCallback('/request_callback')}
+              onClick={() => handleCallback('/request_callback/all-products')}
               className="inline-block bg-red-500 hover:bg-red-600 px-5 py-2 text-sm font-semibold rounded">
-              {t('button')}
+              {t('contact')}
             </button>
           </div>
 
