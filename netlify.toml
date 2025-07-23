@@ -5,14 +5,6 @@ publish = ".next"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-# Edge Function routes
-[[edge_functions]]
-function = "redirect"
-path = "/acecms"
-[[edge_functions]]
-function = "redirect"
-path = "/acecms/*"
-
 [[edge_functions]]
 function = "redirect"
 path = "/web-development"
@@ -22,14 +14,14 @@ path = "/web-development/*"
 
 [[edge_functions]]
 function = "redirect"
-path = "/acemrp"
+path = "/acecms"
 [[edge_functions]]
 function = "redirect"
-path = "/acemrp/*"
+path = "/acecms/*"
 
 [[edge_functions]]
 function = "redirect"
-path = "/aceplm"
+path = "/graphic-design"
 [[edge_functions]]
 function = "redirect"
-path = "/aceplm/*"
+path = "/graphic-design/*"
