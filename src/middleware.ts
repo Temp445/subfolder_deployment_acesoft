@@ -35,7 +35,8 @@ const knownPaths = new Set([
   '/user',
   '/videos',
   '/web-development',
-  '/acecms'
+  '/acecms',
+  '/ace-project'
 ]);
 
 function isSkippable(pathname: string): boolean {
@@ -89,7 +90,7 @@ export function middleware(request: NextRequest) {
   }
 
   const basePath = stripLocale(pathname);
-  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') ||  pathname.startsWith('/web-development/') || pathname.startsWith('/acecms/') )
+  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') ||  pathname.startsWith('/web-development/') || pathname.startsWith('/acecms/') || pathname.startsWith('/ace-project/') )
     {
     return response || NextResponse.next();
   }
