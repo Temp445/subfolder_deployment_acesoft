@@ -9,17 +9,18 @@ export default async (request: Request) => {
     targetUrl = `https://project2-site.netlify.app/web-development${targetPath}${url.search}`;
   } else if (pathname.startsWith('/mobile-development')) {
     const targetPath = pathname.replace(/^\/mobile-development/, '');
-    targetUrl = `https://project2-site.netlify.app/mobile-development${targetPath}${url.search}`;
+    targetUrl = `https://mobile-project-site.netlify.app${targetPath}${url.search}`;
   } else {
-    // Fallback or error handling
     return new Response('Not Found', { status: 404 });
   }
 
-  return fetch(targetUrl, {
+  const response = await fetch(targetUrl, {
     method: request.method,
     headers: request.headers,
     body: ['GET', 'HEAD'].includes(request.method) ? undefined : request.body,
   });
+
+  return response;
 };
 
 export const config = {
