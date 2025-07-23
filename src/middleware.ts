@@ -3,8 +3,16 @@ import createIntlMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
 
 const allowedRegions = [
-  'tn', 'ka', 'mh', 'dl', 'ts', 'hr',
-  'se', 'uaedxb', 'uaesh', 'uaead'
+    'tn',  /* Tamil Nadu */
+    'ka',  /* Karnataka */
+    'mh',  /* Maharashtra */
+    'dl',  /* Delhi */
+    'ts',  /* Telangana */
+    'hr',  /* Haryana */
+    'se',   /* Singapore */
+    'uaedxb', /* UAE Dubai */
+    'uaesh', /* UAE Sharjah */
+    'uaead' /* UAE Abu Dhabi */
 ];
 
 const intlMiddleware = createIntlMiddleware(routing);
