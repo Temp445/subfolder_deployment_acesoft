@@ -4,13 +4,15 @@ export default async (request: Request) => {
   let targetUrl;
 
   // Handle ace-calibration-management-system-on-cloud (with or without /en/ prefix)
-  if (url.pathname.startsWith('/products/ace-calibration-management-system-on-cloud')) {
+  if (url.pathname.startsWith('/products/ace-calibration-management-system-on-cloud') || 
+      url.pathname.startsWith('/en/products/ace-calibration-management-system-on-cloud')) {
     // Remove /en prefix if present for the target URL
     const cleanPath = url.pathname.replace(/^\/en/, '');
     targetUrl = `https://acecms.netlify.app${cleanPath}${url.search}`;
   }
   // Handle ace-project-management-software (with or without /en/ prefix)
-  else if (url.pathname.startsWith('/products/ace-project-management-software')) {
+  else if (url.pathname.startsWith('/products/ace-project-management-software') || 
+           url.pathname.startsWith('/en/products/ace-project-management-software')) {
     // Remove /en prefix if present for the target URL
     const cleanPath = url.pathname.replace(/^\/en/, '');
     targetUrl = `https://aceproject1.netlify.app${cleanPath}${url.search}`;
