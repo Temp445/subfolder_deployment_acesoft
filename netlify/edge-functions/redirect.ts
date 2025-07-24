@@ -50,11 +50,16 @@ export default async (request: Request) => {
   } catch (error) {
     console.log('❌ Fetch failed');
     console.error('Fetch error:', error);
-    console.error('Error message:', error.message);
-    console.error('Error stack:', error.stack);
+    
+    // Handle unknown error type safely
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    const errorStack = error instanceof Error ? error.stack : 'No stack trace available';
+    
+    console.error('Error message:', errorMessage);
+    console.error('Error stack:', errorStack);
     console.log('=== EDGE FUNCTION DEBUG END ===');
     
-    return new Response(`Proxy error: ${error.message}`, { 
+    return new Response(`Proxy error: ${errorMessage}`, { 
       status: 500,
       headers: { 'Content-Type': 'text/plain' }
     });
