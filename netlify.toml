@@ -8,11 +8,11 @@ package = "@netlify/plugin-nextjs"
 
 [[edge_functions]]
 function = "redirect"
-path = "/acecms"
+path = "/products/ace-calibration-management-system-on-cloud"
 
 [[edge_functions]]
 function = "redirect"
-path = "/acecms/*"
+path = "/products/ace-calibration-management-system-on-cloud/*"
 
 [[edge_functions]]
 function = "redirect"
