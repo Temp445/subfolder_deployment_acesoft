@@ -74,10 +74,13 @@ function stripLocale(pathname: string): string {
 // Remove any region segment from the full path
 function removeRegionFromPath(pathname: string): string | null {
   const parts = pathname.split('/').filter(Boolean);
-  const filtered = parts.filter(part => !allowedRegions.includes(part));
-  if (filtered.length !== parts.length) {
-    return '/' + filtered.join('/');
+  const last = parts[parts.length - 1];
+
+  if (allowedRegions.includes(last)) {
+    const newParts = parts.slice(0, -1);
+    return '/' + newParts.join('/');
   }
+
   return null;
 }
 
