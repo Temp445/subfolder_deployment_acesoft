@@ -24,8 +24,8 @@ path = "/web-development/*"
 
 [[edge_functions]]
 function = "redirect"
-path = "/ace-project-management-software"
+path = "/products/ace-project-management-software"
 
 [[edge_functions]]
 function = "redirect"
-path = "/ace-project-management-software/*"
+path = "/products/ace-project-management-software/*"
