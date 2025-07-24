@@ -5,13 +5,6 @@ publish = ".next"
 [[plugins]]
 package = "@netlify/plugin-nextjs"
 
-[[edge_functions]]
-function = "redirect"
-path = "/ace-project"
-
-[[edge_functions]]
-function = "redirect"
-path = "/ace-project/*"
 
 [[edge_functions]]
 function = "redirect"
@@ -28,3 +21,11 @@ path = "/web-development"
 [[edge_functions]]
 function = "redirect"
 path = "/web-development/*"
+
+[[edge_functions]]
+function = "redirect"
+path = "/ace-project"
+
+[[edge_functions]]
+function = "redirect"
+path = "/ace-project/*"
