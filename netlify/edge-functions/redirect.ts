@@ -6,7 +6,7 @@ export default async (request: Request) => {
   // Define mappings for each product/subfolder
   const mappings: Record<string, string> = {
     '/acecms': 'https://acecms.netlify.app/acecms',
-    '/ace-project': 'https://aceprojects.netlify.app/ace-project',
+    '/ace-project': 'https://aceproject1.netlify.app/ace-project',
     '/web-development': 'https://project2-site.netlify.app/web-development',
     // Add more subfolders here if needed
   };
