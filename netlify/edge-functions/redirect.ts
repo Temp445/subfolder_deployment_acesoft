@@ -6,7 +6,7 @@ export default async (request: Request) => {
   // Define mappings from route prefix → target base URL
   const mappings: Record<string, string> = {
     '/products/ace-calibration-management-system-on-cloud': 'https://acecms.netlify.app/products/ace-calibration-management-system-on-cloud',
-    '/products/ace-project-management-software': 'https://aceproject1.netlify.app/products/ace-project-management-software',
+    // '/products/ace-project-management-software': 'https://aceproject1.netlify.app/products/ace-project-management-software',
     '/web-development': 'https://project2-site.netlify.app/web-development',
   };
 
