@@ -46,7 +46,6 @@ const knownPaths = new Set([
   '/user',
   '/videos',
   '/web-development',
-  '/acecms',
   '/products/ace-project-management-software',
   '/products/ace-calibration-management-system-on-cloud'
 ]);
@@ -113,7 +112,7 @@ export function middleware(request: NextRequest) {
   }
 
   const basePath = stripLocale(pathname);
-  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/') || pathname.startsWith('/acecms/') || pathname.startsWith('/ace-project/') )
+  if (knownPaths.has(basePath) || pathname.startsWith('/products/')|| pathname.startsWith('/admin/edit/')|| pathname.startsWith('/demo/')|| pathname.startsWith('/request_callback/'))
     {
     return response || NextResponse.next();
   }
