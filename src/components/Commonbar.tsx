@@ -60,8 +60,7 @@ import { useTranslations } from "next-intl";
           <div className="hidden md:flex items-center space-x-4 ml-10">
             <div className="group">
               <Link
-                href="https://home.acecms.in/"
-                target="_blank"
+                href="/products/ace-calibration-management-system-on-cloud"
                 className="flex items-center text-[#2b2d42] text-sm border border-teal-50 rounded-t-md rounded-l-md   font-semibold relative px-3 py-1 transition-all duration-300 ease-in-out hover:border-black hover:bg-white hover:scale-105"
               >
                 CMS

@@ -14,13 +14,6 @@ path = "/products/ace-calibration-management-system-on-cloud"
 function = "redirect"
 path = "/products/ace-calibration-management-system-on-cloud/*"
 
-[[edge_functions]]
-function = "redirect"
-path = "/web-development"
-
-[[edge_functions]]
-function = "redirect"
-path = "/web-development/*"
 
 [[edge_functions]]
 function = "redirect"
