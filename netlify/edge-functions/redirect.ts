@@ -1,34 +1,28 @@
+
 export default async (request: Request) => {
   const url = new URL(request.url);
   let targetUrl;
 
-  // Extract locale from pathname (e.g., /en/, /es/, /fr/, etc.)
-  const localeMatch = url.pathname.match(/^\/([a-z]{2})\//);
-  const locale = localeMatch ? localeMatch[1] : null;
-  const pathWithoutLocale = locale ? url.pathname.replace(`/${locale}`, '') : url.pathname;
-
-  console.log('Locale detected:', locale);
-  console.log('Path without locale:', pathWithoutLocale);
-  console.log('Original pathname:', url.pathname);
-
-  // Handle ace-calibration-management-system-on-cloud
-  if (pathWithoutLocale.startsWith('/products/ace-calibration-management-system-on-cloud')) {
-    // Forward the request with locale preserved to target site
-    const targetPath = locale ? `/${locale}${pathWithoutLocale}` : pathWithoutLocale;
-    targetUrl = `https://acecms.netlify.app${targetPath}${url.search}`;
+  
+  if (url.pathname.startsWith('/products/ace-calibration-management-system-on-cloud') || 
+      url.pathname.startsWith('/en/products/ace-calibration-management-system-on-cloud') || url.pathname.startsWith('/hi/products/ace-calibration-management-system-on-cloud') ) {
+    // Remove /en prefix if present for the target URL
+    const cleanPath = url.pathname.replace(/^\/en/, '');
+    targetUrl = `https://acecms.netlify.app${cleanPath}${url.search}`;
   }
-  // Handle ace-project-management-software
-  else if (pathWithoutLocale.startsWith('/products/ace-project-management-software')) {
-    // Forward the request with locale preserved to target site
-    const targetPath = locale ? `/${locale}${pathWithoutLocale}` : pathWithoutLocale;
-    targetUrl = `https://aceproject1.netlify.app${targetPath}${url.search}`;
+  // Handle ace-project-management-software (with or without /en/ prefix)
+  else if (url.pathname.startsWith('/products/ace-project-management-software') || 
+           url.pathname.startsWith('/en/products/ace-project-management-software')) {
+    // Remove /en prefix if present for the target URL
+    const cleanPath = url.pathname.replace(/^\/en/, '');
+    targetUrl = `https://aceproject1.netlify.app${cleanPath}${url.search}`;
   }
   // No match found
   else {
     return new Response(`Not Found - No match for: ${url.pathname}`, { status: 404 });
   }
 
-  console.log('Target URL with locale:', targetUrl);
+  console.log('Making fetch request to:', targetUrl);
   
   try {
     const response = await fetch(targetUrl, {
@@ -39,6 +33,7 @@ export default async (request: Request) => {
     
     return response;
   } catch (error) {
+    
     // Handle unknown error type safely
     const errorMessage = error instanceof Error ? error.message : String(error);
     const errorStack = error instanceof Error ? error.stack : 'No stack trace available';
@@ -55,15 +50,13 @@ export default async (request: Request) => {
 
 export const config = {
   path: [
-    // Without locale
     '/products/ace-calibration-management-system-on-cloud',
     '/products/ace-calibration-management-system-on-cloud/*',
+    '/en/products/ace-calibration-management-system-on-cloud',
+    '/en/products/ace-calibration-management-system-on-cloud/*',
     '/products/ace-project-management-software',
     '/products/ace-project-management-software/*',
-    // With any 2-letter locale (en, es, fr, de, etc.)
-    '/*/products/ace-calibration-management-system-on-cloud',
-    '/*/products/ace-calibration-management-system-on-cloud/*',
-    '/*/products/ace-project-management-software',
-    '/*/products/ace-project-management-software/*'
+    '/en/products/ace-project-management-software',
+    '/en/products/ace-project-management-software/*'
   ],
 };
