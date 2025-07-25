@@ -2,29 +2,35 @@ export default async (request: Request) => {
   const url = new URL(request.url);
   let targetUrl;
   
-  // Define supported languages
   const supportedLanguages = ['en', 'hi', 'es', 'fr', 'de', 'ja', 'zh', 'kr', 'pt', 'ru', 'be', 'br', 'it'];
   
-  // Create regex patterns for language prefixes
+  // Create regex pattern for language prefixes
   const langPattern = `(${supportedLanguages.join('|')})`;
-  const aceCalibrationPattern = new RegExp(`^(\/${langPattern})?\/products\/ace-calibration-management-system-on-cloud`);
-  const aceProjectPattern = new RegExp(`^(\/${langPattern})?\/products\/ace-project-management-software`);
   
-  // Handle ace-calibration-management-system-on-cloud (with any supported language prefix)
-  if (aceCalibrationPattern.test(url.pathname)) {
-    // Remove language prefix if present for the target URL
+  // Define route patterns with their corresponding target URLs
+  const routePatterns = [
+    {
+      pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-calibration-management-system-on-cloud`),
+      targetBase: 'https://acecms.netlify.app'
+    },
+    {
+      pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-project-management-software`),
+      targetBase: 'https://aceproject1.netlify.app'
+    }
+  ];
+  
+  // Find matching route
+  const matchedRoute = routePatterns.find(route => route.pattern.test(url.pathname));
+  
+  if (matchedRoute) {
+    // Remove language prefix
     const cleanPath = url.pathname.replace(new RegExp(`^\/${langPattern}`), '');
-    targetUrl = `https://acecms.netlify.app${cleanPath}${url.search}`;
-  }
-  // Handle ace-project-management-software (with any supported language prefix)
-  else if (aceProjectPattern.test(url.pathname)) {
-    // Remove language prefix if present for the target URL
-    const cleanPath = url.pathname.replace(new RegExp(`^\/${langPattern}`), '');
-    targetUrl = `https://aceproject1.netlify.app${cleanPath}${url.search}`;
-  }
-  // No match found
-  else {
-    return new Response(`Not Found - No match for: ${url.pathname}`, { status: 404 });
+    targetUrl = `${matchedRoute.targetBase}${cleanPath}${url.search}`;
+  } else {
+    return new Response(`Not Found - No match for: ${url.pathname}`, { 
+      status: 404,
+      headers: { 'Content-Type': 'text/plain' }
+    });
   }
   
   console.log('Making fetch request to:', targetUrl);
@@ -54,15 +60,15 @@ export default async (request: Request) => {
 
 // Generate paths for all supported languages
 const generatePaths = () => {
-  const supportedLanguages = ['en', 'hi', 'es', 'fr', 'de', 'ja', 'zh', 'be', 'br', 'ru', 'kr','it'];
+  const supportedLanguages = ['en', 'hi', 'es', 'fr', 'de', 'ja', 'zh', 'kr', 'pt', 'ru', 'be', 'br', 'it'];
   const basePaths = [
     '/products/ace-calibration-management-system-on-cloud',
     '/products/ace-calibration-management-system-on-cloud/*',
     '/products/ace-project-management-software',
-    '/products/ace-project-management-software/*'
+    '/products/ace-project-management-software/*',
   ];
   
-  const paths = [...basePaths]; // Include base paths without language prefix
+  const paths = [...basePaths];
   
   // Add paths with language prefixes
   supportedLanguages.forEach(lang => {
