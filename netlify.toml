@@ -16,11 +16,11 @@ path = "/products/ace-calibration-management-system-on-cloud/*"
 
 [[edge_functions]]
 function = "redirect"
-path = "/products/ace-profit-ppap"
+path = "/web-development"
 
 [[edge_functions]]
 function = "redirect"
-path = "/products/ace-profit-ppap/*"
+path = "/web-development/*"
 
 [[edge_functions]]
 function = "redirect"

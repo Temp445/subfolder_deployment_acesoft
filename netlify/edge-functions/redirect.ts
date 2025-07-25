@@ -16,10 +16,6 @@ export default async (request: Request) => {
     {
       pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-project-management-software`),
       targetBase: 'https://aceproject1.netlify.app'
-    },
-    {
-      pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-profit-ppap`),
-      targetBase: 'https://aceppap.netlify.app'
     }
   ];
   
@@ -70,8 +66,6 @@ const generatePaths = () => {
     '/products/ace-calibration-management-system-on-cloud/*',
     '/products/ace-project-management-software',
     '/products/ace-project-management-software/*',
-    '/products/ace-profit-ppap',
-    '/products/ace-profit-ppap/*',
   ];
   
   const paths = [...basePaths];
