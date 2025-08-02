@@ -8,6 +8,10 @@
   },
 
 "Header": {
+  "Home": "Home",
+  "Blog": "Blog",
+  "BlogPanel": "Blog Panel",
+  "SiteAdmin": "Site Admin",
   "Product": "Products",
   "Enquiry": "Product Enquiry",
   "Contact": "Contact Us",

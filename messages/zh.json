@@ -7,6 +7,10 @@
   },
 
   "Header": {
+      "Home": "首页",
+    "Blog": "博客",
+    "BlogPanel": "博客面板",
+    "SiteAdmin": "网站管理员",
     "Product": "产品",
     "Enquiry": "产品咨询",
     "Contact": "联系我们",

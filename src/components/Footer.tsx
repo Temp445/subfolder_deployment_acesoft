@@ -13,10 +13,10 @@ import { useTranslations } from "next-intl";
 const Footer = () => {
   const t = useTranslations('Footer');
   return (
-    <div className="bg-[#FFF5F5] mt-10 xl:mt-40 py-8 bottom-0">
+    <div className="bg-[#FFF5F5] mt-10 lg:mt-0 py-8 lg:py-0 bottom-0">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
 
-        <div className="flex items-center gap-2 mb-8 md:mb-10 ">
+        <div className="flex items-center gap-2 mb-8 pt-6 ">
           <Image src={logo} alt="logo" className="w-8 md:w-9 xl:w-10" />
           <h2 className="text-sm md:text-base xl:text-lg font-semibold">ACE Software Solutions Pvt. Ltd</h2>
         </div>

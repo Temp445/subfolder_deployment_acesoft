@@ -32,7 +32,11 @@ const Login = () => {
         setError('');
         if (result.user.role === 'ADMIN') {
           router.push('/admin');
-        } else {
+        } 
+        else if (result.user.role === 'BLOGGER') {
+          router.push('/blog-admin');
+        }
+        else {
           router.push('/');
         }
       } else {
@@ -110,7 +114,7 @@ const Login = () => {
               </button>
             </div>
 
-            {/* <div className="text-center text-sm">
+            <div className="text-center text-sm">
               <p className="text-gray-600">
                 Don't have an account yet?{' '}
                 <a
@@ -120,7 +124,7 @@ const Login = () => {
                   Register
                 </a>
               </p>
-            </div> */}
+            </div>
           </form>
         </div>
       </div>

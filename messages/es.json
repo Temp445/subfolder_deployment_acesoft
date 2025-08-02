@@ -6,6 +6,10 @@
     "ProjectTooltip": "Simplifique proyectos. Empodere equipos."
   },
   "Header": {
+      "Home": "Inicio",
+    "Blog": "Blog",
+    "BlogPanel": "Panel del blog",
+    "SiteAdmin": "Administrador del sitio",
     "Product": "Productos",
     "Enquiry": "Consulta de producto",
     "Contact": "Contáctenos",

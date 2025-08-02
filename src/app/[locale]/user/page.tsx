@@ -11,7 +11,7 @@ interface User {
   _id: string;
   name: string;
   email: string;
-  role: 'USER' | 'ADMIN' | string;
+  role: 'USER' | 'ADMIN' | 'BLOGGER' | string;
 }
 
 export default function UserDetailsDisplay() {
@@ -108,6 +108,7 @@ export default function UserDetailsDisplay() {
                       >
                         <option value="USER">USER</option>
                         <option value="ADMIN">ADMIN</option>
+                        <option value="BLOGGER">BLOGGER</option>
                       </select>
                     </td>
                   </tr>

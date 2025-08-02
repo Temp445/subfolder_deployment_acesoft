@@ -3,7 +3,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-// import { env } from "@/lib/env"
 
 interface User {
   role: string;
@@ -13,9 +12,11 @@ interface User {
 interface AuthContextType {
   user: User | null;
   isAdmin: boolean;
+  isBlogger: boolean;
   loading: boolean;
   login: (formData: Record<string, any>) => Promise<{ success: boolean; user?: User; error?: string }>;
   checkIsAdmin: () => boolean;
+  checkIsBlogger: () => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -30,6 +31,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isBlogger, setIsBlogger] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -42,12 +44,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
           axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
           setUser({ role });
           setIsAdmin(role === 'ADMIN');
+          setIsBlogger(role === 'BLOGGER');
         } catch (error) {
           console.error('Auth verification failed:', error);
           localStorage.removeItem('token');
           localStorage.removeItem('role');
           setUser(null);
           setIsAdmin(false);
+          setIsBlogger(false);
         }
       }
 
@@ -69,6 +73,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       setUser(user);
       setIsAdmin(user.role === 'ADMIN');
+      setIsBlogger(user.role === 'BLOGGER');
 
       return { success: true, user };
     } catch (error: any) {
@@ -80,12 +85,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   };
 
-  const checkIsAdmin = () => {
-    return isAdmin;
-  };
+  const checkIsAdmin = () => isAdmin;
+  const checkIsBlogger = () => isBlogger;
 
   return (
-    <AuthContext.Provider value={{ user, isAdmin, loading, login, checkIsAdmin }}>
+    <AuthContext.Provider
+      value={{ user, isAdmin, isBlogger, loading, login, checkIsAdmin, checkIsBlogger }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -7,6 +7,9 @@ import Link from 'next/link';
 import { IoChevronDown } from "react-icons/io5";
 import { PiGlobeSimpleLight } from "react-icons/pi";
 import { useTranslations } from "next-intl";
+import logo from '../assets/Images/AceLogo.png';
+import Image from 'next/image';
+
   const Commonbar: FC = () => {
   const router = useRouter();
   const t = useTranslations('Menu');
@@ -53,9 +56,21 @@ import { useTranslations } from "next-intl";
   }, []);
 
   return (
-    <div className="shadow-sm shadow-gray-200  relative z-[300] bg-teal-50">
+    <div className="shadow-sm shadow-gray-200  relative z-[300] ">
       <nav className="container mx-auto hidden md:flex items-center justify-between md:pt-2 pb-2  px-4 md:px-0  relative  z-[300]">
         <div className="flex">
+             <div className="md:flex items-center hidden ">
+            <Link href="/" className=" font-bold text-[#2b2d42] flex gap-1">
+              <Image
+                src={logo}
+                alt="logo"
+                width={100}
+                height={100}
+                className="w-10 h-10 md:w-10 md:h-10"
+              />
+              <span className="mt-2 text-[16px] sm:text-base">ACE Software <br className="lg:hidden" /> Solutions Pvt. Ltd</span>
+            </Link>
+          </div>
 
           <div className="hidden md:flex items-center space-x-4 ml-10">
             <div className="group">

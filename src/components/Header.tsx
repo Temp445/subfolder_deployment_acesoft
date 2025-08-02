@@ -1,17 +1,17 @@
 'use client';
-
+import { ReactNode } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { IoReorderThreeOutline } from 'react-icons/io5';
 import Logo from '../assets/Images/logo.svg';
-import LogoLg from '../assets/Images/AceLogo.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState, useEffect, JSX } from 'react';
+import { useState, useEffect, useMemo, JSX } from 'react';
 import { LuMessageSquareMore } from 'react-icons/lu';
 import { jwtDecode } from 'jwt-decode';
 import { useTranslations } from 'next-intl';
+import { Home, Box, FileText , Info, Book, ShieldUser, LayoutDashboard , NotebookPen ,LogOut  } from 'lucide-react';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -21,6 +21,7 @@ type NavigationItem = {
   name: string;
   href: string;
   className?: string;
+   icon?: ReactNode;
   onClick?: () => void;
 };
 
@@ -31,7 +32,7 @@ type DecodedToken = {
 
 export default function Header(): JSX.Element {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [userRole, setUserRole] = useState<string | null>(null);
   const router = useRouter();
   const t = useTranslations('Header');
   useEffect(() => {
@@ -40,30 +41,51 @@ export default function Header(): JSX.Element {
       setIsAuthenticated(true);
       try {
         const decoded = jwtDecode<DecodedToken>(token);
-        if (decoded.role === 'admin') {
-          setIsAdmin(true);
+            if (decoded.role) {
+          setUserRole(decoded.role);
         }
       } catch (err) {
         console.error('Failed to decode token:', err);
       }
+    }
+    else {
+      setIsAuthenticated(false);
+      setUserRole(null);
     }
   }, []);
 
   const handleLogout = (): void => {
     localStorage.removeItem('token');
     setIsAuthenticated(false);
-    setIsAdmin(false);
+    setUserRole(null);
     router.push('/login');
   };
 
-  const navigation: NavigationItem[] = [
-    { name: t('Product'), href: '/products' },
-    { name: t('Contact'), href: '/contact' },
-    { name: t('About'), href: '/about' },
-    isAuthenticated
-      ? { name: t('Logout'), href: '#', onClick: handleLogout }
-      : { name: t('Login'), href: '/login', className: 'md:hidden lg:block' },
+  const navigation: NavigationItem[] = useMemo(() => {
+    const items: NavigationItem[] = [
+    { name: t('Home'), href: '/', icon: <Home size={17} /> },
+    { name: t('Product'), href: '/products', icon: <Box size={18} /> },
+    { name: t('Contact'), href: '/contact', icon: <FileText size={17} /> },
+    { name: t('About'), href: '/about', icon: <Info size={18} /> },
+    { name: t('Blog'), href: '/blog', icon: <Book size={17} /> },
   ];
+   if (userRole === 'ADMIN') {
+      items.push({ name:  t('Dashboard'), href: '/admin', className: 'md:hidden lg:flex', icon: <LayoutDashboard size={17} /> });
+      items.push({ name: t('BlogPanel'), href: '/blog-admin', className: 'md:hidden lg:flex', icon: <NotebookPen  size={17} /> });
+
+    }
+
+    if (userRole === 'BLOGGER') {
+      items.push({ name: t('BlogPanel'), href: '/blog-admin', icon: <NotebookPen size={17} /> });
+    }
+        items.push(
+      isAuthenticated
+        ? { name: t('Logout'), href: '#', onClick: handleLogout , icon: <LogOut  size={17} /> }
+        : { name: t('SiteAdmin'), href: '/login', className: 'md:hidden lg:flex', icon: <ShieldUser size={17} /> }
+    );
+
+    return items;
+  }, [userRole, isAuthenticated, t]);
 
   return (
     <div className="w-full z-[200] sm:px-4 2xl:px-6 container mx-auto ">
@@ -72,20 +94,11 @@ export default function Header(): JSX.Element {
         {({ open, close }) => (
           <>
             <div className="mx-auto  w-full">
-              <div className="flex h-16 items-center justify-between">
-                <Link href="/">
-                  <div className="hidden md:flex flex-1 md:items-center lg:justify-start gap-1 cursor-pointer">
-                    <Image src={LogoLg} width={50} height={48} alt="Company Logo" className="h-10 pl-2 xl:h-10" />
-                    <span className="mt-3 flex text-[16px] sm:text-base md:mt-1 font-semibold  md:text-base xl:font-semibold">
-                      ACE <span className="ml-2">Software Solutions </span>{' '}
-                      <span className="hidden xl:flex ml-2">Pvt. Ltd</span>
-                    </span>
-                  </div>
-                </Link>
-
+              <div className="flex py-2 items-center justify-evenly">
+              
                 {/* Desktop Navigation */}
                 <div className="hidden  md:block">
-                  <div className="flex flex-wrap items-center gap-6 overflow-x-hidden">
+                  <div className="flex flex-wrap items-center gap-10 overflow-x-hidden">
 
                     {navigation.map((item) => (
                       <Link
@@ -99,10 +112,11 @@ export default function Header(): JSX.Element {
                         }}
                         className={classNames(
                           'hover-effect-1 hover:text-white cursor-pointer rounded',
-                          'rounded-md px-2 py-2 text-[12px] md:text-sm font-semibold',
+                          'rounded-md px-2 py-2 text-[12px] md:text-sm font-semibold flex gap-1',
                           item.className || ''
                         )}
                       >
+                         {item.icon}
                         {item.name}
                       </Link>
                     ))}

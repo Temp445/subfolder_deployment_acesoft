@@ -480,7 +480,8 @@ const HomePage: React.FC = () => {
       >
         <ClientCarousel />
       </motion.div>
-      <Footer />
+   
+      <div className="mt-16"><Footer /></div>
     </div>
   );
 };

@@ -6,6 +6,10 @@
     "ProjectTooltip": "プロジェクトを簡素化し、チームを強化。"
   },
   "Header": {
+    "Home": "ホーム",
+    "Blog": "ブログ",
+    "BlogPanel": "ブログパネル",
+    "SiteAdmin": "サイト管理者",
     "Product": "製品",
     "Enquiry": "製品問い合わせ",
     "Contact": "お問い合わせ",
