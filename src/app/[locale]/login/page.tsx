@@ -53,7 +53,7 @@ const Login = () => {
     <div>
       <Commonbar />
       <Header />
-      <div className="flex md:items-center md:justify-center py-12 px-4 sm:px-6 lg:px-8 lg:mt-10">
+      <div className="flex md:items-center md:justify-center py-12 px-4 sm:px-6 lg:px-8 lg:mt-10 lg:mb-20 ">
         <div className="w-full max-w-md space-y-8 border px-5 py-10 md:px-10 rounded-2xl">
           <div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Login</h2>

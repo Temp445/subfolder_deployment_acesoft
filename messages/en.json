@@ -225,6 +225,38 @@
   "tagline1": "Boost Productivity with Reliable Calibration Management.",
   "tagline2": "Know Your Customers. Build Trust. Grow Your Business.",
   "LearnMore": "Learn more"
+},
+
+"Blog":{
+ "title": "Explore how software simplifies business",
+ "para": "Understand business software through simple, expert-written articles.",
+ "cardtitle1": "Improve Team Productivity",
+ "cardcontent1": "Discover how software tools can streamline communication, task tracking, and team collaboration for better results.",
+ "cardtitle2": "Simplify Business Operations",
+ "cardcontent2": "Learn how digital solutions help automate routine processes, reduce manual effort, and improve business efficiency.",
+ "cardtitle3": "Make Smarter Decisions",
+ "cardcontent3": "Get insights into how data-driven software supports better planning, reporting, and decision-making across teams.",
+ "product": "Empower your business with tools designed for growth",
+ "productdec1":"Automate, Track, and Stay Compliant Effortlessly.",
+ "productdec2":"Close Deals Faster. Serve Customers Better.",
+ "productdec3":"Keep Projects on Track and Teams Aligned.",
+ "productdec4":"Simplifying PPAP for Automotive and Manufacturing Excellence.",
+ "LatestBlogs": "Latest Blogs",
+ "ReadMore": "Read More",
+ "Book": "Book a",
+ "FreeDemo": "Free Demo",
+ "bookdemopara": "Get a hands-on demo and learn how our tools can save time, cut costs, and boost productivity.",
+ "ExpertGuide": "Expert Guide",
+ "Minutes": "30 Minutes",
+ "FreeTrial": "Start Free Trial",
+ "BookDemo": "Book Your Demo Now",
+ "customers" : "Join 3,000+ satisfied customers",
+ "Category": "Filter by Category",
+ "Noblogs": "No blogs found",
+ "Try": "Try selecting a different category to see more content.",
+ "BookFreeDemo": "Book a Free Demo",
+ "Discover": "Discover how our solution can transform your workflow. Get a personalized walkthrough tailored to your business.",
+ "BookNow": "Book Now"
 }
 
 }

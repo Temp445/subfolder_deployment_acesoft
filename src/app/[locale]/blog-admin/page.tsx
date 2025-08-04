@@ -4,18 +4,53 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import BlogProtectedRoute from '@/components/ProtectedRouteBlog';
+import { useLocale } from 'next-intl';
 
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
+interface LocalizedString {
+  en: string;
+  be?: string;
+  br?: string;
+  de?: string;
+  es?: string;
+  hi?: string;
+  fr?: string;
+  it?: string;
+  ja?: string;
+  kr?: string;
+  ru?: string;
+  zh?: string;
+  [key: string]: string | undefined;
+}
+
+interface LocalizedContent {
+  en: string;
+  be?: string;
+  br?: string;
+  de?: string;
+  es?: string;
+  hi?: string;
+  fr?: string;
+  it?: string;
+  ja?: string;
+  kr?: string;
+  ru?: string;
+  zh?: string;
+  [key: string]: any | undefined;
+}
+
+
+
 interface Blog {
   _id: string;
-  title: string;
+  title: LocalizedString;
   author: string;
-  description: string;
+  description: LocalizedString;
   products: string;
-  category?: string;
-  blogimage: string[];
+  category?: LocalizedString;
+  blogimage: string | string[];
   publishedAt?: string;
 }
 
@@ -41,6 +76,8 @@ export default function BlogList() {
   const [filteredBlogs, setFilteredBlogs] = useState<Blog[]>([]);
   const [selectedProduct, setselectedProduct] = useState('All');
   const [loading, setLoading] = useState(true);
+  const locale = useLocale();
+  const t = (text?: LocalizedString) => text?.[locale] ?? text?.en ?? "";
 
     useEffect(() => {
     fetchBlogs();
@@ -160,22 +197,20 @@ export default function BlogList() {
              }}
               >
                 <div className="relative overflow-hidden rounded-t-3xl h-64">
-                  {blog.blogimage.length > 0 && (
-                    <>
+
                       <img
                         src={`${apiUrl}/uploads/${blog.blogimage[0]}`}
-                        alt={blog.title}
+                        alt= {blog.title && t(blog.title as LocalizedString)}
                         className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </>
-                  )}
 
                 </div>
 
                 <div className="p-6">
                   <h2 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
-                    {blog.title}
+                    {/* {blog.title} */}
+                    {blog.title && t(blog.title as LocalizedString)}
                   </h2>
 
                   <div className="flex items-center text-sm text-gray-500 mb-4">

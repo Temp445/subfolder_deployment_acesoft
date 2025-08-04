@@ -211,6 +211,39 @@
   "tagline1": "Aumenta la produttività con una gestione affidabile della calibrazione.",
   "tagline2": "Conosci i tuoi clienti. Costruisci fiducia. Fai crescere il tuo business.",
   "LearnMore": "Scopri di più"
+},
+
+"Blog": {
+  "title": "Scopri come il software semplifica il business",
+  "para": "Comprendi il software aziendale attraverso articoli semplici scritti da esperti.",
+  "cardtitle1": "Migliora la produttività del team",
+  "cardcontent1": "Scopri come gli strumenti software possono migliorare la comunicazione, il monitoraggio delle attività e la collaborazione per ottenere risultati migliori.",
+  "cardtitle2": "Semplifica le operazioni aziendali",
+  "cardcontent2": "Scopri come le soluzioni digitali automatizzano i processi di routine, riducono il lavoro manuale e aumentano l’efficienza.",
+  "cardtitle3": "Prendi decisioni più intelligenti",
+  "cardcontent3": "Scopri come il software basato sui dati supporta una migliore pianificazione, reportistica e decisioni all'interno dei team.",
+  "product": "Potenzia la tua attività con strumenti pensati per la crescita",
+  "productdec1": "Automatizza, monitora e rimani conforme senza sforzo.",
+  "productdec2": "Concludi affari più rapidamente. Offri un servizio migliore.",
+  "productdec3": "Tieni i progetti sotto controllo e i team allineati.",
+  "productdec4": "Semplifica il PPAP per l’eccellenza nell’automotive e nella produzione.",
+  "LatestBlogs": "Ultimi Blog",
+  "ReadMore": "Leggi di più",
+  "Book": "Prenota una",
+  "FreeDemo": "Demo gratuita",
+  "bookdemopara": "Partecipa a una demo pratica e scopri come i nostri strumenti possono farti risparmiare tempo, ridurre i costi e aumentare la produttività.",
+  "ExpertGuide": "Guida esperta",
+  "Minutes": "30 minuti",
+  "FreeTrial": "Inizia la prova gratuita",
+  "BookDemo": "Prenota subito la tua demo",
+  "customers": "Unisciti a oltre 3.000 clienti soddisfatti",
+  "Category": "Filtra per categoria",
+  "Noblogs": "Nessun blog trovato",
+  "Try": "Prova a selezionare un’altra categoria per vedere più contenuti.",
+  "BookFreeDemo": "Prenota una demo gratuita",
+  "Discover": "Scopri come la nostra soluzione può trasformare il tuo flusso di lavoro. Ricevi una presentazione personalizzata per la tua attività.",
+  "BookNow": "Prenota ora"
 }
+
 
 }

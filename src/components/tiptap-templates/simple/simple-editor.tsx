@@ -5,7 +5,7 @@ import { EditorContent, EditorContext, useEditor } from "@tiptap/react"
 
 // Tiptap Core Extensions
 import { StarterKit } from "@tiptap/starter-kit"
-import { Image } from "@tiptap/extension-image"
+// import { Image } from "@tiptap/extension-image"
 import { TaskItem, TaskList } from "@tiptap/extension-list"
 import { TextAlign } from "@tiptap/extension-text-align"
 import { Typography } from "@tiptap/extension-typography"
@@ -71,6 +71,14 @@ import ImageResize from 'tiptap-extension-resize-image';
 // Styles
 import "@/components/tiptap-templates/simple/simple-editor.scss"
 import content from "@/components/tiptap-templates/simple/data/content.json"
+//table
+import { Table } from '@tiptap/extension-table'
+import { TableRow } from '@tiptap/extension-table-row'
+import { TableCell } from '@tiptap/extension-table-cell'
+import { TableHeader } from '@tiptap/extension-table-header'
+
+import { TextStyle } from "@tiptap/extension-text-style"
+import Color from "@tiptap/extension-color"
 
 // Types
 interface SimpleEditorProps {
@@ -118,6 +126,16 @@ export function SimpleEditor({
           enableClickSelection: true,
         },
       }),
+        TextStyle,
+      Color.configure({
+        types: ["textStyle"],
+      }),
+        Table.configure({
+        resizable: true,
+      }),
+      TableRow,
+      TableHeader,
+      TableCell,
       HorizontalRule,
       TextAlign.configure({ types: ["heading", "paragraph"] }),
       TaskList,
@@ -248,8 +266,32 @@ export function SimpleEditor({
     </>
   ), [])
 
+  const setColor = (color: string) => {
+  editor?.chain().focus().setColor(color).run()
+}
+
+const colors = [
+  { name: "Red", value: "#f44336" },
+  { name: "Green", value: "#4caf50" },
+  { name: "Blue", value: "#2196f3" },
+  { name: "Orange", value: "#ff9800" },
+  { name: "Purple", value: "#9c27b0" },
+  { name: "Black", value: "#000000" },
+]
+
   return (
     <div className="simple-editor-wrapper">
+      <div className="flex gap-2 my-1 justify-center mr-2">
+  {colors.map((color) => (
+    <div
+      key={color.name}
+      onClick={() => setColor(color.value)}
+      className="relative w-5 h-5 rounded cursor-pointer border border-gray-300"
+      style={{ backgroundColor: color.value }}
+    >
+    </div>
+  ))}
+</div>
       <EditorContext.Provider value={{ editor }}>
         <Toolbar
           ref={toolbarRef}
@@ -275,7 +317,12 @@ export function SimpleEditor({
         <EditorContent 
           editor={editor} 
           role="presentation" 
-          className="simple-editor-content" 
+          className="simple-editor-content prose max-w-none
+    [&_table]:border [&_table]:border-collapse [&_table]:border-gray-100
+    [&_th]:border [&_td]:border 
+    [&_th]:border-gray-100 [&_td]:border-gray-100
+    [&_th]:px-4 [&_td]:px-4 [&_th]:py-3 [&_td]:py-3
+    [&_th]:bg-gray-100" 
         />
       </EditorContext.Provider>
     </div>

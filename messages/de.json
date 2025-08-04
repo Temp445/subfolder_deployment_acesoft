@@ -218,6 +218,39 @@
   "tagline1": "Steigern Sie die Produktivität mit zuverlässigem Kalibriermanagement.",
   "tagline2": "Kennen Sie Ihre Kunden. Bauen Sie Vertrauen auf. Wachsen Sie mit Ihrem Geschäft.",
   "LearnMore": "Mehr erfahren"
+},
+
+"Blog": {
+  "title": "Erfahren Sie, wie Software Ihr Unternehmen vereinfacht",
+  "para": "Verstehen Sie Unternehmenssoftware durch einfache, von Experten verfasste Artikel.",
+  "cardtitle1": "Teamproduktivität verbessern",
+  "cardcontent1": "Erfahren Sie, wie Softwaretools Kommunikation, Aufgabenverfolgung und Teamarbeit verbessern können.",
+  "cardtitle2": "Geschäftsprozesse vereinfachen",
+  "cardcontent2": "Erfahren Sie, wie digitale Lösungen Routineaufgaben automatisieren, manuelle Arbeit reduzieren und die Effizienz steigern.",
+  "cardtitle3": "Klügere Entscheidungen treffen",
+  "cardcontent3": "Erfahren Sie, wie datengestützte Software die Planung, Berichterstattung und Entscheidungsfindung im Team unterstützt.",
+  "product": "Stärken Sie Ihr Unternehmen mit wachstumsorientierten Tools",
+  "productdec1": "Automatisieren, verfolgen und mühelos konform bleiben.",
+  "productdec2": "Abschlüsse schneller tätigen. Kunden besser bedienen.",
+  "productdec3": "Projekte im Zeitplan halten und Teams koordinieren.",
+  "productdec4": "PPAP für Automobil- und Fertigungsexzellenz vereinfachen.",
+  "LatestBlogs": "Neueste Blogs",
+  "ReadMore": "Mehr erfahren",
+  "Book": "Jetzt",
+  "FreeDemo": "kostenlose Demo",
+  "bookdemopara": "Erhalten Sie eine praktische Demo und erfahren Sie, wie unsere Tools Zeit sparen, Kosten senken und die Produktivität steigern können.",
+  "ExpertGuide": "Expertenleitfaden",
+  "Minutes": "30 Minuten",
+  "FreeTrial": "Kostenlose Testversion starten",
+  "BookDemo": "Jetzt Demo buchen",
+  "customers": "Schließen Sie sich über 3.000 zufriedenen Kunden an",
+  "Category": "Nach Kategorie filtern",
+  "Noblogs": "Keine Blogs gefunden",
+  "Try": "Versuchen Sie, eine andere Kategorie auszuwählen, um mehr Inhalte zu sehen.",
+  "BookFreeDemo": "Kostenlose Demo buchen",
+  "Discover": "Erfahren Sie, wie unsere Lösung Ihren Arbeitsablauf transformieren kann. Erhalten Sie eine personalisierte Führung, die auf Ihr Unternehmen zugeschnitten ist.",
+  "BookNow": "Jetzt buchen"
 }
+
 
 }

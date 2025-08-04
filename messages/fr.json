@@ -211,6 +211,39 @@
   "tagline1": "Boostez votre productivité avec une gestion fiable de l’étalonnage.",
   "tagline2": "Connaissez vos clients. Gagnez leur confiance. Développez votre activité.",
   "LearnMore": "En savoir plus"
+},
+
+"Blog": {
+  "title": "Découvrez comment les logiciels simplifient les affaires",
+  "para": "Comprenez les logiciels d'entreprise grâce à des articles simples et rédigés par des experts.",
+  "cardtitle1": "Améliorez la productivité de l'équipe",
+  "cardcontent1": "Découvrez comment les outils logiciels peuvent améliorer la communication, le suivi des tâches et la collaboration pour de meilleurs résultats.",
+  "cardtitle2": "Simplifiez les opérations commerciales",
+  "cardcontent2": "Découvrez comment les solutions numériques automatisent les tâches répétitives, réduisent les efforts manuels et augmentent l'efficacité.",
+  "cardtitle3": "Prenez de meilleures décisions",
+  "cardcontent3": "Découvrez comment les logiciels basés sur les données aident à une meilleure planification, des rapports efficaces et une prise de décision éclairée.",
+  "product": "Donnez à votre entreprise les outils pour grandir",
+  "productdec1": "Automatisez, suivez et restez conforme facilement.",
+  "productdec2": "Concluez des affaires plus rapidement. Offrez un meilleur service.",
+  "productdec3": "Gardez les projets sur la bonne voie et les équipes alignées.",
+  "productdec4": "Simplifiez le PPAP pour l'excellence automobile et industrielle.",
+  "LatestBlogs": "Derniers articles",
+  "ReadMore": "Lire la suite",
+  "Book": "Réservez une",
+  "FreeDemo": "Démo gratuite",
+  "bookdemopara": "Profitez d’une démo personnalisée et découvrez comment nos outils peuvent faire gagner du temps, réduire les coûts et booster la productivité.",
+  "ExpertGuide": "Guide d'expert",
+  "Minutes": "30 minutes",
+  "FreeTrial": "Commencez l’essai gratuit",
+  "BookDemo": "Réservez votre démo maintenant",
+  "customers": "Rejoignez plus de 3 000 clients satisfaits",
+  "Category": "Filtrer par catégorie",
+  "Noblogs": "Aucun blog trouvé",
+  "Try": "Essayez de sélectionner une autre catégorie pour voir plus de contenu.",
+  "BookFreeDemo": "Réserver une démo gratuite",
+  "Discover": "Découvrez comment notre solution peut transformer votre flux de travail. Obtenez une présentation personnalisée adaptée à votre entreprise.",
+  "BookNow": "Réservez maintenant"
 }
+
 
 }

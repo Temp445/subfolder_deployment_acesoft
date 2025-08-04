@@ -211,6 +211,39 @@
   "tagline1": "Aumente a produtividade com uma gestão de calibração confiável.",
   "tagline2": "Conheça seus clientes. Construa confiança. Expanda seus negócios.",
   "LearnMore": "Saiba mais"
+},
+
+"Blog": {
+  "title": "Explore como o software simplifica os negócios",
+  "para": "Entenda o software empresarial por meio de artigos simples e escritos por especialistas.",
+  "cardtitle1": "Melhore a produtividade da equipe",
+  "cardcontent1": "Descubra como ferramentas de software podem otimizar a comunicação, o acompanhamento de tarefas e a colaboração da equipe para melhores resultados.",
+  "cardtitle2": "Simplifique as operações comerciais",
+  "cardcontent2": "Aprenda como soluções digitais ajudam a automatizar processos rotineiros, reduzir o esforço manual e melhorar a eficiência do negócio.",
+  "cardtitle3": "Tome decisões mais inteligentes",
+  "cardcontent3": "Obtenha insights sobre como softwares orientados por dados apoiam o planejamento, os relatórios e a tomada de decisões em equipes.",
+  "product": "Fortaleça seu negócio com ferramentas desenvolvidas para o crescimento",
+  "productdec1": "Automatize, acompanhe e esteja em conformidade com facilidade.",
+  "productdec2": "Feche negócios mais rápido. Atenda melhor seus clientes.",
+  "productdec3": "Mantenha projetos no cronograma e equipes alinhadas.",
+  "productdec4": "Simplificando o PPAP para excelência automotiva e industrial.",
+  "LatestBlogs": "Últimos Blogs",
+  "ReadMore": "Leia mais",
+  "Book": "Agende uma",
+  "FreeDemo": "Demonstração gratuita",
+  "bookdemopara": "Veja uma demonstração prática e descubra como nossas ferramentas podem economizar tempo, reduzir custos e aumentar a produtividade.",
+  "ExpertGuide": "Guia do especialista",
+  "Minutes": "30 minutos",
+  "FreeTrial": "Iniciar teste gratuito",
+  "BookDemo": "Agende sua demonstração agora",
+  "customers": "Junte-se a mais de 3.000 clientes satisfeitos",
+  "Category": "Filtrar por categoria",
+  "Noblogs": "Nenhum blog encontrado",
+  "Try": "Tente selecionar outra categoria para ver mais conteúdo.",
+  "BookFreeDemo": "Agende uma demonstração gratuita",
+  "Discover": "Descubra como nossa solução pode transformar seu fluxo de trabalho. Receba uma demonstração personalizada adaptada ao seu negócio.",
+  "BookNow": "Agendar agora"
 }
+
 
 }
