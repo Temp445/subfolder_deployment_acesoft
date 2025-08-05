@@ -21,8 +21,8 @@
     "bookDemo": "Agendar Demonstração"
   },
   "Hero": {
-    "Title": "Grandes produtos são feitos",
-    "highlight": "por grandes equipes",
+    "Title": "Oferecemos soluções de software empresarial para",
+    "highlight": "a indústria de manufatura",
     "Description": "Otimize seu negócio com soluções ERP avançadas, inovações da Indústria 4.0 e sistemas de gestão em nuvem. Do setor automotivo e aeroespacial à manufatura e comércio, entregamos software inteligente, escalável e seguro, adaptado ao seu setor.",
     "button": {
       "Contact": "Contate-Nos",
@@ -53,7 +53,7 @@
     }
   },
   "About": {
-    "Title": "Sobre Nós",
+    "Title": "Sobre a ACE Software Solutions",
     "Description": "Empresa fundada em 2001, com sede e centro de P&D em Chennai, criada por profissionais com ampla experiência na indústria manufatureira.",
     "para": "A equipe de gestão da ASSPL possui experiência prática em design e implementação de",
     "highlight": "sistemas ERP, soluções Indústria 4.0 & IIoT e produtos SaaS",
@@ -105,7 +105,7 @@
   "ProductEnquiry": {
     "Title": "Solicitação de Produto",
     "ContactTitle": "Contate-Nos",
-    "Subtitle": "Fale conosco e agende uma demo hoje!",
+    "Subtitle": "Entre em contato com a ACE Software Solutions para agendar uma demonstração gratuita",
     "code": "BR",
     "Form": {
       "Name": "Nome",
@@ -177,7 +177,7 @@
   },
   "products": {
     "Title": "Nossos Produtos",
-    "Subtitle": "Otimize seu negócio para operações mais rápidas e eficientes",
+    "Subtitle": "Soluções de software inteligentes para otimizar suas operações de manufatura",
     "Categories": "Categorias",
     "Loading": "Carregando produtos",
     "Nofound": "Nenhum produto encontrado",
@@ -214,7 +214,7 @@
 },
 
 "Blog": {
-  "title": "Explore como o software simplifica os negócios",
+  "title": "Como o software empresarial inteligente simplifica as operações e aumenta a produtividade",
   "para": "Entenda o software empresarial por meio de artigos simples e escritos por especialistas.",
   "cardtitle1": "Melhore a produtividade da equipe",
   "cardcontent1": "Descubra como ferramentas de software podem otimizar a comunicação, o acompanhamento de tarefas e a colaboração da equipe para melhores resultados.",

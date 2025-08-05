@@ -23,8 +23,8 @@
   },
 
   "Hero": {
-    "Title": "Großartige Produkte entstehen",
-    "highlight": "durch großartige Teams",
+    "Title": "Wir bieten Business-Softwarelösungen für",
+    "highlight": "die Fertigungsindustrie",
     "Description": "Optimieren Sie Ihr Unternehmen mit fortschrittlichen ERP-Lösungen, Innovationen von Industrie 4.0 und cloudbasierten Managementsystemen. Von Automobil- und Luftfahrtindustrie bis hin zu Fertigung und Handel bieten wir intelligente, skalierbare und sichere Software, die auf die Bedürfnisse Ihrer Branche zugeschnitten ist.",
     "button": {
       "Contact": "Kontaktieren Sie uns",
@@ -56,7 +56,7 @@
   },
 
   "About": {
-    "Title": "Über uns",
+    "Title": "Über ACE Software Solutions",
     "Description": "ein Unternehmen, das 2001 gegründet wurde, mit Hauptsitz und F&E-Zentrum in Chennai. Gegründet von Fachleuten mit umfassender Erfahrung in der Fertigungsindustrie.",
     "para": "Das ASSPL-Management-Team verfügt über praktische Erfahrung in der Entwicklung und Implementierung von",
     "highlight": " ERP-Systemen, Industrie 4.0- & IIOT-Lösungen und SAAS-Produkten",
@@ -109,7 +109,7 @@
   "ProductEnquiry": {
     "Title": "Produktanfrage",
     "ContactTitle": "Kontaktieren Sie uns",
-    "Subtitle": "Kontaktieren Sie uns und buchen Sie noch heute eine Demo!",
+    "Subtitle": "Kontaktieren Sie ACE Software Solutions, um eine kostenlose Demo zu buchen",
     "code": "DE",
     "Form": {
       "Name": "Name",
@@ -183,7 +183,7 @@
 
   "products": {
     "Title": "Unsere Produkte",
-    "Subtitle": "Optimieren Sie Ihr Geschäft für schnellere und reibungslosere Abläufe",
+    "Subtitle": "Intelligente Softwarelösungen zur Optimierung Ihrer Fertigungsprozesse",
     "Categories": "Kategorien",
     "Loading": "Produkte werden geladen",
     "Nofound": "Keine Produkte gefunden",
@@ -221,7 +221,7 @@
 },
 
 "Blog": {
-  "title": "Erfahren Sie, wie Software Ihr Unternehmen vereinfacht",
+  "title": "Wie intelligente Business-Software Abläufe vereinfacht und die Produktivität steigert",
   "para": "Verstehen Sie Unternehmenssoftware durch einfache, von Experten verfasste Artikel.",
   "cardtitle1": "Teamproduktivität verbessern",
   "cardcontent1": "Erfahren Sie, wie Softwaretools Kommunikation, Aufgabenverfolgung und Teamarbeit verbessern können.",

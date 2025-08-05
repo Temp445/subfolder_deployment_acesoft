@@ -21,8 +21,8 @@
     "bookDemo": "데모 예약"
   },
   "Hero": {
-    "Title": "훌륭한 제품은",
-    "highlight": "훌륭한 팀에 의해 만들어집니다",
+    "Title": "저희는 비즈니스용 소프트웨어 솔루션을 제공합니다",
+    "highlight": "제조 산업을 위해",
     "Description": "첨단 ERP 솔루션, Industry 4.0 혁신 및 클라우드 기반 관리 시스템으로 비즈니스를 최적화하세요. 자동차, 항공우주에서 제조 및 무역까지, 업계에 맞춤화된 스마트하고 확장 가능하며 안전한 소프트웨어를 제공합니다.",
     "button": {
       "Contact": "문의하기",
@@ -53,7 +53,7 @@
     }
   },
   "About": {
-    "Title": "회사 소개",
+    "Title": "ACE Software Solutions 소개",
     "Description": "2001년 설립, 첸나이 본사 및 R&D 센터 운영, 제조 분야 풍부한 경험의 전문가들에 의해 설립.",
     "para": "ASSPL 경영진은 다음 분야에 전문성을 갖추고 있습니다:",
     "highlight": "ERP 시스템, Industry 4.0 및 IIoT 솔루션, SaaS 모델 제품",
@@ -105,7 +105,7 @@
   "ProductEnquiry": {
     "Title": "제품 문의",
     "ContactTitle": "문의하기",
-    "Subtitle": "지금 바로 문의하시고 데모를 예약하세요!",
+    "Subtitle": "ACE Software Solutions에 문의하여 무료 데모를 예약하세요",
     "code": "KR",
     "Form": {
       "Name": "이름",
@@ -177,7 +177,7 @@
   },
   "products": {
     "Title": "제품",
-    "Subtitle": "더 빠르고 원활한 운영을 위한 비즈니스 최적화",
+    "Subtitle": "제조 운영을 최적화하기 위한 스마트 소프트웨어 솔루션",
     "Categories": "카테고리",
     "Loading": "제품 불러오는 중",
     "Nofound": "제품을 찾을 수 없음",
@@ -214,7 +214,7 @@
 },
 
 "Blog": {
-  "title": "소프트웨어가 비즈니스를 어떻게 간소화하는지 알아보기",
+  "title": "스마트 비즈니스 소프트웨어가 운영을 간소화하고 생산성을 향상시키는 방법",
   "para": "전문가가 작성한 간단한 글을 통해 비즈니스 소프트웨어를 이해하세요.",
   "cardtitle1": "팀 생산성 향상",
   "cardcontent1": "소프트웨어 도구로 커뮤니케이션, 업무 추적 및 팀 협업을 향상시키는 방법을 알아보세요.",

@@ -24,10 +24,9 @@
   },
 
 
-
   "Hero": {
-    "Title": "Great Product is built",
-    "highlight": "by great teams",
+    "Title": "We Provide Business Software Solutions for",
+    "highlight": "the Manufacturing Industry",
     "Description": "Optimize your business with advanced ERP solutions, Industry 4.0 innovations, and cloud-based management systems. From automotive and aerospace to manufacturing and trading, we deliver smart, scalable, and secure software tailored to your industry's needs.",
     "button":{
       "Contact": "Contact Us",
@@ -59,7 +58,7 @@
   },
 
   "About":{
-    "Title": "About Us",
+    "Title": "About ACE Software Solutions",
     "Description": " a company incorporated in 2001, has its Head Office and its Research & Development center in Chennai. The company was started by professionals having rich experience in the Manufacturing sector.",
     "para": "The ASSPL Management Team has hands on experience in designing and implementation of ",
     "highlight": " ERP systems, Industry 4.0 & IIOT Solutions and SAAS model products",
@@ -113,7 +112,7 @@
    "ProductEnquiry": {
   "Title": "Product Enquiry ",
   "ContactTitle": "Contact Us",
-  "Subtitle": "Connect with us and Book a Demo today!",
+  "Subtitle": "Contact ACE Software Solutions to Book a Free Demo",
   "code": "IN",
   "Form": {
     "Name": "Name",
@@ -189,7 +188,7 @@
 
 "products":{
   "Title": "Our Products",
-  "Subtitle": "Optimize your business for faster and smoother operations",
+  "Subtitle": "Smart Software Solutions to Optimize Your Manufacturing Operations",
   "Categories": "Categories",
   "Loading": "Loading products",
   "Nofound": "No products found",
@@ -228,7 +227,7 @@
 },
 
 "Blog":{
- "title": "Explore how software simplifies business",
+ "title": "How Smart Business Software Simplifies Operations and Boosts Productivity",
  "para": "Understand business software through simple, expert-written articles.",
  "cardtitle1": "Improve Team Productivity",
  "cardcontent1": "Discover how software tools can streamline communication, task tracking, and team collaboration for better results.",

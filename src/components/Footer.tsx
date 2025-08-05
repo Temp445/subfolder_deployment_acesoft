@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-8 px-5">
 
           <div className="flex flex-col space-y-4">
-            <h1 className="text-sm md:text-base xl:text-lg font-semibold">{t('contactUs')}</h1>
+            <h3 className="text-sm md:text-base xl:text-lg font-semibold">{t('contactUs')}</h3>
             <p className="text-xs md:text-sm xl:text-base max-w-xs">
               {t('address')}
             </p>
@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-4">
 
             <div className="flex flex-col space-y-4">
-              <h1 className="text-sm md:text-base xl:text-lg font-semibold">{t('links.QuickLinks')} </h1>
+              <h3 className="text-sm md:text-base xl:text-lg font-semibold">{t('links.QuickLinks')} </h3>
               <div className="flex flex-col space-y-2 md:space-y-3">
                 <Link href="/" className="text-xs md:text-sm xl:text-base hover:text-gray-600 transition-colors">{t('links.Home')}</Link>
                 <Link href="/products" className="text-xs md:text-sm xl:text-base hover:text-gray-600 transition-colors">{t('links.Products')}</Link>
@@ -60,7 +60,7 @@ const Footer = () => {
 
 
             <div className="flex flex-col space-y-4  ">
-              <h1 className="text-sm md:text-base xl:text-lg font-semibold">{t('links.help')}</h1>
+              <h3 className="text-sm md:text-base xl:text-lg font-semibold">{t('links.help')}</h3>
               <div className="flex flex-col space-y-2 md:space-y-2">
                 <a href="tel:+919840137210" className="text-xs md:text-sm xl:text-base">{t('links.phone')}: <br /><span className="text-gray-800 underline">+91 9840137210 </span> </a>
                 <a href="mailto:sales@acesoft.in" className="text-xs md:text-sm xl:text-base ">{t('links.email')}: <br /><span className="text-gray-800 underline">sales@acesoft.in </span> </a>

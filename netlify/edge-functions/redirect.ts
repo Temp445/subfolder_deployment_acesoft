@@ -10,7 +10,7 @@ export default async (request: Request) => {
   // Define route patterns with their corresponding target URLs
   const routePatterns = [
     {
-      pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-calibration-management-system-on-cloud`),
+      pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-calibration-management-system`),
       targetBase: 'https://acecms.netlify.app'
     },
     {
@@ -62,8 +62,8 @@ export default async (request: Request) => {
 const generatePaths = () => {
   const supportedLanguages = ['en', 'hi', 'es', 'fr', 'de', 'ja', 'zh', 'kr', 'pt', 'ru', 'be', 'br', 'it'];
   const basePaths = [
-    '/products/ace-calibration-management-system-on-cloud',
-    '/products/ace-calibration-management-system-on-cloud/*',
+    '/products/ace-calibration-management-system',
+    '/products/ace-calibration-management-system/*',
     '/products/ace-project-management-software',
     '/products/ace-project-management-software/*',
   ];

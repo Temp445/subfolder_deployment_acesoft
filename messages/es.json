@@ -21,8 +21,8 @@
     "bookBemo": "Agendar demo"
   },
   "Hero": {
-    "Title": "Un gran producto se construye",
-    "highlight": "por grandes equipos",
+    "Title": "Ofrecemos soluciones de software empresarial para",
+    "highlight": "la industria manufacturera",
     "Description": "Optimice su negocio con soluciones ERP avanzadas, innovaciones Industria 4.0 y sistemas de gestión en la nube. Desde la automoción y la aeronáutica hasta la fabricación y el comercio, ofrecemos software inteligente, escalable y seguro adaptado a su sector.",
     "button": {
       "Contact": "Contáctenos",
@@ -53,7 +53,7 @@
     }
   },
   "About": {
-    "Title": "Sobre nosotros",
+    "Title": "Acerca de ACE Software Solutions",
     "Description": "una empresa constituida en 2001, con sede y centro de I+D en Chennai. Fundada por profesionales con amplia experiencia en la industria manufacturera.",
     "para": "El equipo directivo de ASSPL tiene experiencia práctica en diseñar e implementar",
     "highlight": " ERP, soluciones Industria 4.0 e IIoT y productos SaaS",
@@ -105,7 +105,7 @@
   "ProductEnquiry": {
     "Title": "Consulta de producto",
     "ContactTitle": "Contáctenos",
-    "Subtitle": "Conéctese con nosotros y programe una demo hoy mismo !",
+    "Subtitle": "Contacta con ACE Software Solutions para reservar una demostración gratuita",
     "code": "ES",
     "Form": {
       "Name": "Nombre",
@@ -177,7 +177,7 @@
   },
   "products": {
     "Title": "Nuestros productos",
-    "Subtitle": "Optimice su negocio para operaciones más rápidas y fluidas",
+    "Subtitle": "Soluciones de software inteligentes para optimizar sus operaciones de manufactura",
     "Categories": "Categorías",
     "Loading": "Cargando productos",
     "Nofound": "No se encontraron productos",
@@ -214,7 +214,7 @@
 },
 
 "Blog": {
-  "title": "Descubre cómo el software simplifica los negocios",
+  "title": "Cómo el software empresarial inteligente simplifica las operaciones y aumenta la productividad",
   "para": "Comprende el software empresarial con artículos sencillos escritos por expertos.",
   "cardtitle1": "Mejora la productividad del equipo",
   "cardcontent1": "Descubre cómo las herramientas de software mejoran la comunicación, el seguimiento de tareas y la colaboración para obtener mejores resultados.",

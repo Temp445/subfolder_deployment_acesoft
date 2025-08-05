@@ -48,7 +48,7 @@ const ClientCarousel = () => {
 
   return (
     <div className="px-5 lg:px-20 mt-5 md:mt-10 z-0">
-      <h1 className="text-center text-[22px] py-5 font-semibold">{t('button.OurClients')}</h1>
+      <h2 className="text-center text-[22px] py-5 font-semibold">{t('button.OurClients')}</h2>
 
       <div className="py-2 md:py-4">
         <Marquee

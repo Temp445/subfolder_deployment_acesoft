@@ -226,8 +226,8 @@ export default function BlogList() {
                       }) : ''}
                     </span>
                   </div>
-          <div className='flex gap-4'>
-                  
+
+          <div className='flex gap-4'>  
                   <Link
                     href={`/blog-admin/blog-edit/${blog._id}`}
                     className="inline-flex items-center group/btn  border text-black  px-4 py-1 hover:text-white hover:bg-amber-600 rounded text-sm font-semibold shadow-lg hover:shadow-xl transform transition-all duration-300"

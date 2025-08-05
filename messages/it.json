@@ -6,7 +6,7 @@
     "ProjectTooltip": "Semplifica i progetti. Potenzia i team."
   },
   "Header": {
-      "Home": "Home",
+    "Home": "Home",
     "Blog": "Blog",
     "BlogPanel": "Pannello Blog",
     "SiteAdmin": "Amministratore del sito",
@@ -21,8 +21,8 @@
      "bookDemo": "Prenota una demo"
   },
   "Hero": {
-    "Title": "Un grande prodotto si crea",
-    "highlight": "con grandi team",
+    "Title": "Forniamo soluzioni software aziendali per",
+    "highlight": "l'industria manifatturiera",
     "Description": "Ottimizza la tua azienda con soluzioni ERP avanzate, innovazioni Industry 4.0 e sistemi di gestione cloud. Dall’automotive all’aerospaziale, fino alla produzione e al commercio, offriamo software intelligenti, scalabili e sicuri su misura per il tuo settore.",
     "button": {
       "Contact": "Contattaci",
@@ -53,7 +53,7 @@
     }
   },
   "About": {
-    "Title": "Chi siamo",
+    "Title": "Informazioni su ACE Software Solutions",
     "Description": "una società fondata nel 2001, con sede e centro R&S a Chennai. Fondata da esperti con esperienza nel settore manufatturiero.",
     "para": "Il team di gestione ASSPL ha esperienza nella progettazione e implementazione di",
     "highlight": " sistemi ERP, soluzioni Industry 4.0 e IIoT e prodotti SaaS",
@@ -105,7 +105,7 @@
   "ProductEnquiry": {
     "Title": "Richiesta prodotto",
     "ContactTitle": "Contattaci",
-    "Subtitle": "Contattaci e prenota una demo oggi stesso!",
+    "Subtitle": "Contatta ACE Software Solutions per prenotare una demo gratuita",
     "code": "IT",
     "Form": {
       "Name": "Nome",
@@ -177,7 +177,7 @@
   },
   "products": {
     "Title": "I nostri prodotti",
-    "Subtitle": "Ottimizza la tua azienda per operazioni più rapide e fluide",
+    "Subtitle": "Soluzioni software intelligenti per ottimizzare le tue operazioni di produzione",
     "Categories": "Categorie",
     "Loading": "Caricamento prodotti",
     "Nofound": "Nessun prodotto trovato",
@@ -214,7 +214,7 @@
 },
 
 "Blog": {
-  "title": "Scopri come il software semplifica il business",
+  "title": "Come il software aziendale intelligente semplifica le operazioni e aumenta la produttività",
   "para": "Comprendi il software aziendale attraverso articoli semplici scritti da esperti.",
   "cardtitle1": "Migliora la produttività del team",
   "cardcontent1": "Scopri come gli strumenti software possono migliorare la comunicazione, il monitoraggio delle attività e la collaborazione per ottenere risultati migliori.",

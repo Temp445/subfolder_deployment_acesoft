@@ -23,8 +23,8 @@
   },
 
   "Hero": {
-    "Title": "优秀的产品来自",
-    "highlight": "优秀的团队",
+    "Title": "我们为企业提供软件解决方案",
+    "highlight": "制造业",
     "Description": "通过先进的 ERP 解决方案、工业 4.0 创新和基于云的管理系统优化您的业务。从汽车、航空航天到制造和贸易，我们提供智能、可扩展且安全的软件，专为您的行业需求量身定制。",
     "button": {
       "Contact": "联系我们",
@@ -56,7 +56,7 @@
   },
 
   "About": {
-    "Title": "关于我们",
+    "Title": "关于 ACE Software Solutions",
     "Description": "公司成立于 2001 年，总部及研发中心位于金奈，由在制造行业拥有丰富经验的专业人士创立。",
     "para": "ASSPL 管理团队在以下方面具有丰富经验：",
     "highlight": "ERP 系统、工业 4.0、IIOT 解决方案和 SAAS 模式产品",
@@ -109,7 +109,7 @@
   "ProductEnquiry": {
     "Title": "产品咨询",
     "ContactTitle": "联系我们",
-    "Subtitle": "立即联系我们并预约演示！",
+    "Subtitle": "联系 ACE Software Solutions 预约免费的演示",
     "code": "CN",
     "Form": {
       "Name": "姓名",
@@ -183,7 +183,7 @@
 
   "products": {
     "Title": "我们的产品",
-    "Subtitle": "优化您的业务，实现更快速更流畅的运营",
+    "Subtitle": "优化您制造运营的智能软件解决方案",
     "Categories": "分类",
     "Loading": "加载产品中",
     "Nofound": "未找到相关产品",
@@ -221,7 +221,7 @@
 },
 
 "Blog": {
-  "title": "探索软件如何简化业务流程",
+  "title": "智能商业软件如何简化操作并提升生产力",
   "para": "通过简单、由专家撰写的文章了解企业软件的运作方式。",
   "cardtitle1": "提升团队效率",
   "cardcontent1": "了解软件工具如何优化沟通、任务追踪和团队协作，从而实现更好的成果。",

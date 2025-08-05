@@ -21,8 +21,8 @@
     "bookDemo": "Réserver une démo"
   },
   "Hero": {
-    "Title": "Un grand produit se construit",
-    "highlight": "par des équipes exceptionnelles",
+    "Title": "Nous fournissons des solutions logicielles pour les entreprises pour",
+    "highlight": "l'industrie manufacturière",
     "Description": "Optimisez votre activité avec des solutions ERP avancées, des innovations Industrie 4.0 et des systèmes de gestion cloud. De l’automobile à l’aérospatiale, en passant par la fabrication et le commerce, nous fournissons des logiciels intelligents, évolutifs et sécurisés adaptés à votre secteur.",
     "button": {
       "Contact": "Contactez-nous",
@@ -53,7 +53,7 @@
     }
   },
   "About": {
-    "Title": "À propos de nous",
+    "Title": "À propos de ACE Software Solutions",
     "Description": "une société créée en 2001, avec siège et centre R&D à Chennai. Fondée par des experts de l’industrie manufacturière.",
     "para": "L’équipe dirigeante d’ASSPL possède une expérience solide dans la conception et la mise en œuvre de",
     "highlight": " ERP, solutions Industrie 4.0 & IIoT ainsi que produits SaaS",
@@ -105,7 +105,7 @@
   "ProductEnquiry": {
     "Title": "Demande de produit",
     "ContactTitle": "Contactez-nous",
-    "Subtitle": "Contactez-nous et réservez une démo dès aujourd’hui !",
+    "Subtitle": "Contactez ACE Software Solutions pour réserver une démonstration gratuite",
     "code": "FR",
     "Form": {
       "Name": "Nom",
@@ -177,7 +177,7 @@
   },
   "products": {
     "Title": "Nos produits",
-    "Subtitle": "Optimisez votre activité pour des opérations plus rapides et fluides",
+    "Subtitle": "Solutions logicielles intelligentes pour optimiser vos opérations de fabrication",
     "Categories": "Catégories",
     "Loading": "Chargement des produits",
     "Nofound": "Aucun produit trouvé",
@@ -214,7 +214,7 @@
 },
 
 "Blog": {
-  "title": "Découvrez comment les logiciels simplifient les affaires",
+  "title": "Comment un logiciel métier intelligent simplifie les opérations et augmente la productivité",
   "para": "Comprenez les logiciels d'entreprise grâce à des articles simples et rédigés par des experts.",
   "cardtitle1": "Améliorez la productivité de l'équipe",
   "cardcontent1": "Découvrez comment les outils logiciels peuvent améliorer la communication, le suivi des tâches et la collaboration pour de meilleurs résultats.",

@@ -97,14 +97,13 @@ const AboutPage = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative z-10 flex flex-col items-center justify-center h-full text-white px-6 text-center xl:text-start xl:items-start xl:ml-100 xml:ml-70 xl:justify-start xl:mt-30 "
+            className="relative z-10 flex flex-col items-center justify-center h-full text-white px-6  xl:text-start w-full "
           >
-            <h1 className="text-lg md:text-3xl font-semibold relative inline-block mb-4 overflow-hidden after:content-[''] after:block after:w-16 xl:after:w-29 after:h-[2px] after:bg-white after:rounded after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0">
+            <h1 className="text-lg md:text-3xl font-bold relative inline-block mb-4 overflow-hidden after:content-[''] after:block after:w-16 xl:after:w-80 after:h-[2px] after:bg-white after:rounded after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0">
               {t('Title')}
-              <span className="block w-16 h-0.5 bg-[#F7666F] absolute left-1/2 -translate-x-1/2 bottom-[-6px]"></span>
             </h1>
 
-            <p className="text-sm md:text-base max-w-4xl leading-relaxed w-70 md:w-full xl:w-170 xl:text-2xl xl:mt-10">
+            <p className="text-sm md:text-base max-w-4xl leading-relaxed w-70 md:w-full  xl:text-2xl xl:mt-10">
               ACE Software Solutions Pvt. Ltd; {t('Description')}
             </p>
           </motion.div>
@@ -169,7 +168,7 @@ const AboutPage = () => {
               <div className="border border-gray-300 rounded-2xl overflow-hidden">
                 <Image src={item.img} alt={item.title} className="w-full h-48 object-cover" />
               </div>
-              <h1 className="mt-4 text-[16px] sm:text-lg font-semibold">{item.title}</h1>
+              <h2 className="mt-4 text-[16px] sm:text-lg font-semibold">{item.title}</h2>
               <p className="mt-2 text-gray-600 text-[12px] sm:text-sm">{item.description}</p>
             </motion.div>
           ))}
@@ -185,12 +184,12 @@ const AboutPage = () => {
           viewport={{ once: true }}
           className="text-center mt-10 xl:mt-20 px-4"
         >
-          <h1 className="text-[#F7666F] text-sm sm:text-lg">
+          <h2 className="text-[#F7666F] text-sm sm:text-lg">
             {t('WhyChoose.Title')} <br />
             <span className="text-black font-semibold text-sm sm:text-lg">
               {t('WhyChoose.Subtitle')} ACE Software Solutions
             </span>
-          </h1>
+          </h2>
 
           <motion.div
             variants={containerVariants}
@@ -236,7 +235,7 @@ const AboutPage = () => {
                 >
                   <div className="flex items-center gap-2">
                     <div className="text-sm sm:text-2xl">  <item.icon /> </div>
-                    <h1 className="text-sm md:text-[16px] font-semibold">{item.title}</h1>
+                    <h3 className="text-sm md:text-[16px] font-semibold">{item.title}</h3>
                   </div>
                   <p className="text-justify text-[12px] md:text-sm w-full sm:w-60 ml-8 flex flex-wrap pe-10 md:pe-0 text-gray-600">
                     {item.description}
@@ -248,9 +247,9 @@ const AboutPage = () => {
         </motion.div>
 
         <div className="md:bg-gray-100 mt-12 md:mt-20 h-auto pb-16 px-10 sm:px-0 4xl:rounded-2xl">
-          <h1 className="flex w-full justify-center py-5 font-bold text-[20px] lg:text-[24px] text-gray-800 md:mt-10">
+          <h3 className="flex w-full justify-center py-5 font-bold text-[20px] lg:text-[24px] text-gray-800 md:mt-10">
             {t('Team.Title')}
-          </h1>
+          </h3>
 
           <div className="lg:mt-0 md:px-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-3">

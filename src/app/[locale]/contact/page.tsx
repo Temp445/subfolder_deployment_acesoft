@@ -169,16 +169,16 @@ const ContactUs: React.FC = () => {
     <div>
       <Commonbar />
       <Header />
-      <div className="mt-0 px-2">
+      <div className="mt-0 px-2 pb-32">
         <h2 className="sm:hidden w-full mx-auto text-center mt-10 mb-5 font-semibold text-[24px]">
           {t('ContactTitle')}
         </h2>
-        <div className="flex flex-col md:flex-row p-4 py-10 md:py-0 rounded-lg border md:border-0 max-w-6xl mx-auto sm:mt-20 mb-20 justify-center">
+        <div className="flex flex-col md:flex-row p-4 py-10 md:py-0 rounded-lg border md:border-0 max-w-7xl mx-auto sm:mt-20 mb-20 justify-center ">
           <div className="md:w-2/3">
-            <h2 className="text-xl md:text-3xl font-semibold text-gray-800 mb-6">
+            <h1 className="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
               {t('Subtitle')}
-            </h2>
-            <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+            </h1>
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4 border-gray-600 border p-6 rounded">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col">
                   <label htmlFor="Name" className="font-medium">
@@ -281,7 +281,7 @@ const ContactUs: React.FC = () => {
                         value={product}
                         className="h-4 w-4 text-indigo-600 border-gray-300"
                       />
-                      <span className="text-sm text-gray-700">{product}</span>
+                      <span className="text-sm text-gray-900">{product}</span>
                     </label>
                   ))}
                 </div>
@@ -308,27 +308,27 @@ const ContactUs: React.FC = () => {
             </form>
           </div>
 
-          <div className="hidden lg:block md:w-1/3 md:pl-6 mt-6 md:mt-2 overflow-hidden">
+          <div className="hidden lg:block md:w-1/3 md:pl-6 mt-6 md:mt-14 overflow-hidden">
             <h3 className="text-xl font-semibold">{t('contacts.directContacts')}</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-800 text-sm">
               {t('contacts.callSchedule')}
             </p>
-            <p className="text-gray-700 mt-2 flex gap-2 hover:scale-105 transition text-[14px]">
+            <p className=" mt-2 flex gap-2 ">
               <MdAddIcCall className="mt-1" />
               {t('contacts.support')} - 44 24795144 <br />
               {t('contacts.sales')} - 44 24795145
 
             </p>
-            <p className="text-gray-700 mt-2 flex gap-2 hover:scale-105 transition text-[14px]">
-              <MdOutlineSendToMobile className="mt-1" />
+            <p className=" mt-2 flex gap-2">
+              <MdOutlineSendToMobile className="mt-1 text-xl" />
               +91 9840137210
             </p>
-            <p className="text-gray-700 mt-2 flex gap-2 hover:scale-105 transition text-[14px]">
-              <MdOutlineMail className="mt-1" />
+            <a href="mailto:sales@acesoft.in" className=" mt-3 flex gap-2 underline transition ">
+              <MdOutlineMail className="mt-1 text-red-600 text-xl" />
               sales@acesoft.in
-            </p>
-            <div className="mt-4 space-y-3 overflow-hidden px-3 py-2">
-              <div className="bg-[#f4f5f583] border border-gray-200 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl hover:scale-105 transition">
+            </a>
+            <div className="mt-4 space-y-3 overflow-hidden px-3 md:px-0 py-2">
+              <div className="border border-gray-400 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl  transition">
                 <div className="rounded flex items-center gap-4">
                   <HiUserGroup className="text-2xl text-[#f78566]" />
                   <span className="text-black font-medium">
@@ -340,7 +340,7 @@ const ContactUs: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-[#f4f5f583] border border-gray-200 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl hover:scale-105 transition">
+              <div className="border border-gray-400 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl  transition">
                 <div className="flex items-center gap-3">
                   <FaLaptopCode className="text-2xl text-[#7066f7]" />
                   <span className="text-black font-medium">
@@ -352,12 +352,12 @@ const ContactUs: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-[#f4f5f583] border border-gray-200 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl hover:scale-105 transition">
+              <div className="border border-gray-400 p-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl  transition">
                 <div className="flex items-center gap-3">
                   <RiCustomerService2Fill className="text-2xl text-[#6696f7]" />
                   <span className="text-black font-medium">{t('contacts.supportRequests')}</span>
                 </div>
-                <p className="text-gray-600 text-sm ml-10 mt-1">
+                <p className="text-gray-800 text-sm ml-10 mt-1">
                   {t('contacts.supportSubtext')}
                 </p>
               </div>
@@ -365,11 +365,11 @@ const ContactUs: React.FC = () => {
 
             <div className="h-0.5 w-2/4 bg-gray-300 rounded-2xl  mx-auto"></div>
 
-            <div className="bg-[#f4f5f583] border border-gray-200 p-3 mt-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl hover:scale-105 transition mx-3 overflow-hidden">
+            <div className=" border border-gray-400 p-3 mt-3 rounded items-center  hover:shadow-gray-200 hover:shadow-xl transition  overflow-hidden">
               <div className="flex items-center gap-3">
                 <FaLocationDot className="text-2xl text-[#F7666F]" />
               </div>
-              <p className="text-gray-600 text-sm ml-10 px-2 -mt-5">
+              <p className="text-gray-900 text-sm ml-10 px-2 -mt-5">
                 {t('contacts.address')}
               </p>
             </div>

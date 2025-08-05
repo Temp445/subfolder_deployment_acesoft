@@ -85,7 +85,6 @@ const b = useTranslations('Blog');
         const res = await axios.get(`${apiUrl}/api/blog/${blogpath}`)
         setBlog(res.data)
       } catch (err) {
-        console.error('Error fetching blog:', err)
         setNotFound(true)
       } finally {
         setLoading(false)

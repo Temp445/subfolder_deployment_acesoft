@@ -20,9 +20,9 @@ const BookCard = ({ onClick }: BookCardProps) => {
           <div className='w-20 h-20 bg-blue-200 absolute right-0 bottom-0 rounded-tl-full'></div>
 
 
-          <h1 className=" text-xl md:text-3xl font-extrabold text-center text-gray-800 mb-6 mt-3 md:mt-14 py-3 overflow-hidden text-shadow-lg ">
+          <h2 className=" text-xl md:text-3xl font-extrabold text-center text-gray-800 mb-6 mt-3 md:mt-14 py-3 overflow-hidden text-shadow-lg ">
             {t('DemoCard.Title')}
-          </h1>
+          </h2>
 
           <p className="text-[12px] md:text-lg text-center text-gray-600 max-w-3xl mb-8 overflow-hidden ">
             {t('DemoCard.para')}

@@ -131,20 +131,20 @@ const HomePage: React.FC = () => {
   //   });
   // }, []);
   const width = {
-    en: 'text-3xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-5xl pb-2',
-    zh: 'text-2xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-5xl pb-2',
-    ru: 'text-xl sm:text-2xl md:text-5xl lg:text-3xl xl:text-5xl pb-2',
-    de: 'text-2xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-4xl pb-2',
-    fr: 'text-xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-4xl pb-2',
-    es: 'text-2xl sm:text-2xl md:text-5xl lg:text-3xl xl:text-4xl pb-2',
-    it: 'text-2xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-3xl 2xl:text-5xl pb-2',
-    br: 'text-xl sm:text-2xl md:text-5xl lg:text-4xl  2xl:text-5xl pb-2',
-    ja: 'text-xl sm:text-2xl md:text-5xl lg:text-3xl  2xl:text-4xl pb-2',
-    kr: 'text-xl sm:text-2xl md:text-5xl lg:text-3xl  2xl:text-5xl pb-2',
-    hi: 'text-2xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-5xl  leading-normal',
-    be: 'text-2xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-5xl  leading-normal',
+    en: 'text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl pb-2',
+    zh: 'text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl pb-2',
+    ru: 'text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl pb-2',
+    de: 'text-2xl sm:text-2xl md:text-4xl lg:text-3xl xl:text-4xl pb-2',
+    fr: 'text-xl sm:text-2xl md:text-4xl lg:text-2xl xl:text-3xl pb-2',
+    es: 'text-2xl sm:text-2xl md:text-4xl lg:text-2xl xl:text-3xl pb-2',
+    it: 'text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl pb-2',
+    br: 'text-xl sm:text-2xl md:text-4xl lg:text-3xl  2xl:text-3xl pb-2',
+    ja: 'text-xl sm:text-2xl md:text-3xl lg:text-3xl  2xl:text-3xl pb-2',
+    kr: 'text-xl sm:text-2xl md:text-4xl lg:text-3xl  2xl:text-4xl pb-2',
+    hi: 'text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl  leading-normal',
+    be: 'text-2xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-4xl  leading-normal',
 
-  }[locale] || 'text-3xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-5xl';
+  }[locale] || 'text-3xl sm:text-2xl md:text-5xl lg:text-4xl xl:text-4xl';
 
   return (
     <div className="w-full mx-auto justify-center items-center xxl:container">
@@ -164,10 +164,9 @@ const HomePage: React.FC = () => {
                 variants={fadeIn}
                 custom={0}
                 className={`${width} font-bold text-[#F7666F] text-left  mb-4 sm:mb-6  overflow-hidden  `}>
-                {t('Title')} <br className="block" />
-                <span className="text-[#403D3D]">{t('highlight')}</span>
+                {t('Title')}
+                <span className="text-[#403D3D]"> {t('highlight')} </span>
               </motion.h1>
-
               <motion.video
                 variants={scaleUp}
                 className="h-auto justify-center mx-auto w-4/5 sm:w-7/12 my-4 lg:hidden"
@@ -199,10 +198,10 @@ const HomePage: React.FC = () => {
               >
                 <Link
                   href="/contact"
-                  className="flex items-start mt-1 mb-2 sm:mt-4 lg:mt-6 xl:mt-8  py-2 gap-2 text-lg md:text-lg md:text-bold lg:font-extrabold xl:text-2xl text-[#F7666F] font-bold transition-all"
+                  className="flex items-start mt-1 mb-2 sm:mt-4 lg:mt-6 xl:mt-8  py-2 gap-2  md:text-lg md:text-bold lg:font-extrabold xl:text-xl text-[#F7666F] font-bold transition-all"
                 >
                   {t('button.Contact')}{" "}
-                  <BiSolidRightArrowSquare className="mt-1 text-lg md:text-xl lg:text-2xl" />
+                  <BiSolidRightArrowSquare className="mt-1  md:text-lg lg:text-xl" />
                 </Link>
               </motion.div>
             </motion.div>
@@ -316,12 +315,12 @@ const HomePage: React.FC = () => {
         className="px-4 sm:px-6 md:px-8 lg:px-12 py-8"
       >
         <div className="container mx-auto">
-          <motion.h1
+          <motion.h2
             variants={fadeIn}
             className="text-center text-xl  sm:text-xl md:text-2xl lg:text-2xl font-bold mb-6 sm:mb-8 lg:mb-10"
           >
             {t('product.Title')}
-          </motion.h1>
+          </motion.h2>
 
           {/* CMS Feature */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between mb-10 sm:mb-16 lg:mb-0 xl:ml-10 border border-gray-300 rounded-sm shadow-sm md:shadow-none md:border-0">
@@ -450,9 +449,9 @@ const HomePage: React.FC = () => {
       <div className="w-full max-w-6xl lg:max-w-7xl mx-auto px-6 md:px-32 py-8 md:py-10 bg-red-50 md:rounded-xl ">
         <div className="h-[320px] md:h-96 flex flex-col items-center justify-center border bg-white border-gray-300 rounded-xl p-8 shadow-lg relative">
           <div className="w-20 h-1 rounded-2xl justify-center bg-red-400"></div>
-          <h1 className="text-xl md:text-3xl font-extrabold text-center text-gray-800 mb-6 mt-8 md:mt-2 lg:mt-14 overflow-hidden">
+          <h2 className="text-xl md:text-3xl font-extrabold text-center text-gray-800 mb-6 mt-8 md:mt-2 lg:mt-14 overflow-hidden">
             {t('DemoCard.Title')}
-          </h1>
+          </h2>
 
           <p className="text-[12px] md:text-lg text-center text-gray-600 max-w-3xl mb-10 md:mb-5 lg:mb-10 overflow-hidden">
             {t('DemoCard.para')}

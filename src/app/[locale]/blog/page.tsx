@@ -8,7 +8,6 @@ import { useLocale } from 'next-intl';
 import { ArrowRight, Sparkles, Users, Clock, CheckCircle, MoveRight } from 'lucide-react';
 
 import image1 from "@/assets/Images/blogimage1.png";
-import image2 from "@/assets/Images/blogimage2.jpg";
 import image3 from "@/assets/Images/blogimage3.jpg";
 import image4 from "@/assets/Images/blogimage4.jpg";
 import image5 from "@/assets/Images/blogimage5.jpg";
@@ -139,7 +138,7 @@ export default function BlogList() {
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12">
     <div className="flex-1 text-center md:text-left">
-      <h1 className="text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-tight mb-6">
+      <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 max-w-4xl">
         {b('title')}
       </h1>
       <p className="text-lg sm:text-xl max-w-xl text-gray-100 mx-auto md:mx-0">
@@ -169,7 +168,7 @@ export default function BlogList() {
           key={index}
           className="bg-white rounded-t-2xl p-6 text-gray-900 shadow-md hover:shadow-xl transition backdrop-blur-lg"
         >
-          <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+          <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
           <p className="text-sm text-gray-600">{card.content}</p>
         </div>
       ))}
@@ -180,9 +179,9 @@ export default function BlogList() {
 {/* product section */}
 
 <section className="bg-gray-50 py-20 px-4">
-      <div className=" mx-auto">
-<h1 className='text-4xl max-w-xl pb-5'>{b('product')}</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ <div className=" mx-auto">
+<h2 className='text-4xl max-w-xl pb-5'>{b('product')}</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
   {[
   {
@@ -195,19 +194,19 @@ export default function BlogList() {
     title: 'ACE CRM',
     description: b('productdec2'),
     image: image5,
-    link: '/products/',
+    link: '/products/ace-customer-relationship-management-system',
   },
   {
     title: 'ACE Project',
     description: b('productdec3'),
     image: image4,
-    link: '/products',
+    link: '/products/ace-project-management-software',
   },
   {
     title: 'ACE PPAP',
     description: b('productdec4'),
-    image: image2,
-    link: '/products',
+    image: image3,
+    link: '/products/ace-profit-ppap',
   },
 ].map((item, i) => (
             <div key={i} className="relative group rounded overflow-hidden shadow-2xl shadow-gray-500 p-1">
@@ -222,10 +221,9 @@ export default function BlogList() {
     />
 </Link>
 
-  <div
-  className={`absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4`}
->
-  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+  <div className={`absolute bottom-0 left-0 right-0 backdrop-blur-md bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4`} >
+
+  <h2 className="text-lg font-semibold mb-1">{item.title}</h2>
   <p className="text-sm">{item.description}</p>
 </div>
 </div>
@@ -235,10 +233,10 @@ export default function BlogList() {
     </section>
 
     {/* latest blog section */}
-          <section className="">
-    <div className="relative w-fit pr-12 h-16 mb-5 bg-blue-500 [clip-path:polygon(0_0,100%_0,80%_100%,0_100%)] text-3xl font-bold text-white flex pl-3 items-center text-center shadow-lg shadow-indigo-500/40">
- {b('LatestBlogs')}
-</div>
+    <section>
+         <div className="relative w-fit pr-12 h-16 mb-5 bg-blue-500 [clip-path:polygon(0_0,100%_0,80%_100%,0_100%)] text-3xl font-bold text-white flex pl-3 items-center text-center shadow-lg shadow-indigo-500/40">
+      {b('LatestBlogs')}
+     </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 px-4 lg:px-0 lg:ml-5">
                  <div className="row-span-2">
@@ -294,7 +292,7 @@ export default function BlogList() {
                 ))}
               </div>
 
-  {/* book demo card */}
+    {/* book demo card */}
     <div className="max-w-md mx-auto h-fit relative overflow-hidden">
       
       <div className="relative bg-red-400 rounded lg:rounded-xl shadow-xl p-8 text-center">  
@@ -342,8 +340,8 @@ export default function BlogList() {
         </div>
       </div>
     </div>
-            </div>
-          </section>
+    </div>
+   </section>
 
       {/* Filter & All Blogs Section */}
       <div className="mx-auto p-6 xl:pt-12">

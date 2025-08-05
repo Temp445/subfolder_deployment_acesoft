@@ -59,7 +59,7 @@ export default async function RootLayout({
         <AuthProvider>
           <NextIntlClientProvider>
             {children}
-            {/* <CallbackCard /> */}
+            <CallbackCard />
             <BackToTop />
           </NextIntlClientProvider>
         </AuthProvider>

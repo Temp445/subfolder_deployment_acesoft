@@ -126,10 +126,10 @@ const ProductsPage: React.FC = () => {
       <Header />
       <div className="min-h-screen h-full 2xl:container w-full mx-auto">
         <div className="w-full h-50 bg-[#FFF5F5] flex flex-col items-center justify-center text-center p-6 mb-3 2xl:rounded-5">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">{t('Title')}</h1>
-          <p className="text-sm mt-2 text-gray-700">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{t('Title')}</h2>
+          <h1 className="text-base mt-2 text-gray-700">
             {t('Subtitle')}
-          </p>
+          </h1>
         </div>
 
         <div className="container mx-auto flex flex-col md:flex-row mb-20 sm:ml-2">

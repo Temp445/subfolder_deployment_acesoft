@@ -400,24 +400,6 @@ const BlogUpload: React.FC = () => {
           ))}
         </div>
 
-        {/* Banner Images */}
-        {/* <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">Banner Images</label>
-          <input
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={handleImageChange}
-            className="w-full p-2 border border-gray-300 rounded"
-            aria-label="Banner Images Input"
-          />
-          <div className="flex space-x-2 mt-2">
-            {previewImages.map((img, index) => (
-              <img key={index} src={img} className="w-16 h-16 rounded object-cover" alt={`Preview ${index}`} />
-            ))}
-          </div>
-        </div> */}
-
         {/* Blog Content Editor */}
         <div className="space-y-4">
           <label className="block text-sm font-medium text-gray-700">Blog Content</label>

@@ -238,7 +238,7 @@ const ProductDetails: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <h2 className="lg:text-xl xl:text-2xl font-bold mb-4 relative inline-block">
+            <h1 className="lg:text-xl xl:text-2xl font-bold mb-4 relative inline-block">
               {product?.productName || "Unnamed Product"}
               <motion.span
                 className="absolute bottom-0 left-0 h-1 bg-blue-500 rounded"
@@ -246,7 +246,7 @@ const ProductDetails: React.FC = () => {
                 animate={{ width: "100%" }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               />
-            </h2>
+            </h1>
             <motion.div
               className="text-[12px] lg:text-base space-y-2 overflow-hidden overflow-y-hidden"
               variants={stagger}
@@ -310,6 +310,7 @@ const ProductDetails: React.FC = () => {
           >
             <img
               src={productImage[0] || "/placeholder.jpg"}
+              alt={product?.productName}
               className="w-full md:h-60 lg:h-96 object-cover transition-all duration-700 hover:scale-110"
               aria-label="Product Image"
             />
@@ -324,7 +325,7 @@ const ProductDetails: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
         >
-          <motion.h1
+          <motion.h2
             className="md:text-xl lg:text-2xl font-semibold relative inline-block pt-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -341,7 +342,7 @@ const ProductDetails: React.FC = () => {
               whileInView={{ width: "100px" }}
               transition={{ delay: 0.3, duration: 0.6 }}
             />
-          </motion.h1>
+          </motion.h2>
           <motion.p
             className="mt-5 text-gray-700 max-w-4xl mx-auto text-[12px] sm:text-sm lg:text-lg overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
@@ -414,7 +415,7 @@ const ProductDetails: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
         >
-          <motion.h1
+          <motion.h2
             className="md:text-xl lg:text-2xl font-semibold relative inline-block mx-auto pt-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -432,7 +433,7 @@ const ProductDetails: React.FC = () => {
               whileInView={{ width: "100px" }}
               transition={{ delay: 0.3, duration: 0.6 }}
             />
-          </motion.h1>
+          </motion.h2>
           <motion.div
             className="mt-8 text-gray-800 max-w-3xl mx-auto flex flex-col text-xl overflow-hidden"
             variants={stagger}
@@ -476,7 +477,7 @@ const ProductDetails: React.FC = () => {
         >
           {productImages.length > 0 ? (
             <>
-              <motion.h1
+              <motion.h2
                 className="text-lg lg:text-2xl font-semibold md:mb-6 relative inline-block"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -489,7 +490,7 @@ const ProductDetails: React.FC = () => {
                   whileInView={{ width: "80px" }}
                   transition={{ delay: 0.3, duration: 0.6 }}
                 />
-              </motion.h1>
+              </motion.h2>
               <motion.div
                 className="flex flex-wrap gap-4 justify-center py-10 px-3"
                 variants={stagger}
@@ -527,7 +528,7 @@ const ProductDetails: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
           >
-            <motion.h1
+            <motion.h2
               className="text-lg md:text-lg lg:text-2xl font-semibold relative inline-block"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -540,7 +541,7 @@ const ProductDetails: React.FC = () => {
                 whileInView={{ width: "100px" }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               />
-            </motion.h1>
+            </motion.h2>
             <motion.div
               className="md:mt-8 flex flex-wrap gap-8 justify-center max-w-7xl mx-auto py-5"
               variants={stagger}
@@ -595,7 +596,7 @@ const ProductDetails: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
           >
-            <motion.h1
+            <motion.h2
               className="text-lg lg:text-2xl font-semibold relative inline-block"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -606,7 +607,7 @@ const ProductDetails: React.FC = () => {
                 initial={{ width: 0 }}
                 whileInView={{ width: "80px" }}
                 transition={{ delay: 0.3, duration: 0.6 }} />
-            </motion.h1>
+            </motion.h2>
 
             <motion.div
               className="w-full mx-auto mt-12 flex flex-wrap justify-center gap-8 py-5"
