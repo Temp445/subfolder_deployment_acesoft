@@ -505,7 +505,7 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
             Banner Image
           </label>
           
-          <div className="relative w-full min-h-52 border-2 border-dashed rounded-lg border-gray-300 hover:border-gray-400 transition-colors">
+          <div className="relative w-fit min-h-52 border-2 border-dashed rounded-lg border-gray-300 hover:border-gray-400 transition-colors">
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500 z-0">
               <Upload size={24} className="mb-2" />
               <p className="text-sm font-medium">Upload New Banner Image</p>
@@ -517,18 +517,21 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
               multiple
               accept="image/*"
               onChange={handleImageChange}
-              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-50"
+              className="absolute inset-0 w-max-xl h-full opacity-0 cursor-pointer z-50"
               disabled={isSubmitting}
             />
             
             <div className="relative z-10">
               {(previewUrls.length > 0 ? previewUrls : existingImages).map((src, index) => (
                 <div key={index} className="relative">
-                  <img
-                    src={ `${apiUrl}/uploads/${src}`
+                    <img
+                    src={
+                      src.startsWith('blob:')
+                        ? src
+                        : `${apiUrl}/uploads/${src}`
                     }
                     alt={`Preview ${index + 1}`}
-                    className="h-72 w-full object-cover rounded"
+                    className="h-72 w-max-xl object-cover rounded"
                   />
                   {previewUrls.length > 0 && (
                     <button

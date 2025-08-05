@@ -262,7 +262,7 @@ export default function BlogList() {
                 {latestBlogs.slice(1, 3).map((blog) => (
                   <div
                     key={blog._id}
-                    className="bg-white/70 rounded shadow-xl p-4 hover:shadow-2xl transition"
+                    className="bg-white/70 rounded shadow-xl p-2 hover:shadow-2xl transition"
                   >
             <div className="flex flex-col md:flex-row hover:bg-yellow-300 rounded p-4 hover:shadow-2xl transition gap-4 group ">
             

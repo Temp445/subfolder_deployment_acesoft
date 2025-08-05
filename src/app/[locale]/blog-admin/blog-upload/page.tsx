@@ -303,11 +303,11 @@ const BlogUpload: React.FC = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
 
-             <div className=' relative w-full min-h-52 border-2 border-dashed rounded-lg border-gray-400 cursor-pointer mb-5'>
-            
+          <label className="block text-sm font-medium text-gray-700">Banner Image</label>
+             <div className=' relative w-fit min-w-md  min-h-52 border-2 border-dashed rounded-lg border-gray-400 cursor-pointer mb-5 p-1'>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
               <Upload size={24} className="mb-2" />
-              <p className="text-sm font-medium z-10">Upload Banner Image</p>
+              <p className="text-sm font-medium">Upload Banner Image</p>
             </div>
             <input
                 id="file-input"
@@ -315,10 +315,11 @@ const BlogUpload: React.FC = () => {
               multiple
               accept="image/*"
               onChange={handleImageChange}
-              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-50"
+              required
             />    
              {previewImages.map((img, index) => (
-              <img key={index} src={img} className="w-full h-72 rounded object-cover z-50" alt={`Preview ${index}`} />
+              <img key={index} src={img} className="w-full h-72 relative rounded object-cover z-50" alt={`Preview ${index}`} />
             ))}   
           </div>
         
