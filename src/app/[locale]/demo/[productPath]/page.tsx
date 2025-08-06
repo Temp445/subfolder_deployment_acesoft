@@ -4,6 +4,7 @@ import DemoClient from './demoClient';
 import { getProductByPath } from '@/lib/api';
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL;
 
 export async function generateMetadata({ params }: { params: Promise<{ productPath: string }> }) : Promise<Metadata> {
   const { productPath } = await params;
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
   const title = `Book Free demo | ${product?.productName}`;
   const imageUrl = Array.isArray(product.imageUrl)
     ? `${apiUrl}/${product.imageUrl[0]}`
-    : `${apiUrl}/${product.imageUrl}`;
+    : '/og-images/AceLogo.png';
+
 
   return {
     title,
@@ -30,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
     openGraph: {
       title,
       description,
-      url: `${apiUrl}/products/${productPath}`,
+      url: `${domainUrl}/demo/${productPath}`,
       images: [{ url: imageUrl }],
     },
     twitter: {

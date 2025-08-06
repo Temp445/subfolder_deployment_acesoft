@@ -21,7 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
   const title = `${product?.productName}`;
   const imageUrl = Array.isArray(product.imageUrl)
     ? `${apiUrl}/${product.imageUrl[0]}`
-    : `${apiUrl}/${product.imageUrl}`;
+    : '/og-images/AceLogo.png';
+
 
   return {
     title,

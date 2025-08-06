@@ -4,12 +4,12 @@ import BlogClient from './blogClient';
 import { getBlogByPath } from '@/lib/api';
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
- 
+ const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL;
+
 // generateMetadata with awaited params
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; blogpath: string }> }) : Promise<Metadata>  {
+export async function generateMetadata({ params }: { params: Promise<{ blogpath: string }> }) : Promise<Metadata>  {
  
-   const { locale, blogpath } = await params;
-  
+  const { blogpath } = await params;
   const blog = await getBlogByPath(blogpath);
 
   if (!blog) {
@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
   }
 
-  const title = blog.products || 'Ace Blog';
-  const description = blog.description?.[locale] || blog.description?.en || '';
+  const title = blog.products || 'Blog | Ace Software Solutions';
+  const description =  blog.title?.en || '';
   const image = blog.blogimage?.[0]
     ? `${apiUrl}/uploads/${blog.blogimage[0]}`
-    : '/default-og.jpg';
+    : '/og-images/AceLogo.png';
 
   return {
     title: ` Blog | ${title}`,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `${apiUrl}/blog/${blogpath}`,
+      url: `${domainUrl}/blog/${blogpath}`,
       images: [{ url: image }],
       type: 'article',
     },
