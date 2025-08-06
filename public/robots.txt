@@ -1,7 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /blog-admin/
+# Host
+Host: https://acesofts.netlify.app
 
+# Sitemaps
 Sitemap: https://acesofts.netlify.app/sitemap.xml
