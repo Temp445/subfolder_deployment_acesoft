@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /blog-admin/
+
+Sitemap: https://acesofts.netlify.app/sitemap.xml
