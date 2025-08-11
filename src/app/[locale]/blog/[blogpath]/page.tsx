@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ blogpath:
     : '/og-images/AceLogo.png';
 
   return {
-    title: ` Blog | ${title}`,
+    title: `${title}`,
     description,
     openGraph: {
       title,
