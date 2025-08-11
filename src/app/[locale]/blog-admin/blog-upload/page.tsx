@@ -32,6 +32,8 @@ interface LocalizedContent {
 
 
 interface BlogData {
+  metatitle: string;
+  metadescription: string;
   title: LocalizedString;
   author: string;
   description: LocalizedString;
@@ -99,6 +101,8 @@ const BlogUpload: React.FC = () => {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
 
   const [blogData, setBlogData] = useState<BlogData>({
+    metatitle: '',
+    metadescription: '',
     title: { en: '' },
     author: '',
     description: { en: '' },
@@ -221,6 +225,8 @@ const BlogUpload: React.FC = () => {
     
     imageFiles.forEach(file => formData.append("blogimage", file));
     
+    formData.append('metatitle', blogData.metatitle);
+    formData.append('metadescription', blogData.metadescription);
     formData.append('author', blogData.author);
     formData.append('products', blogData.products);
     
@@ -322,6 +328,33 @@ const BlogUpload: React.FC = () => {
               <img key={index} src={img} className="w-full h-72 relative rounded object-cover z-50" alt={`Preview ${index}`} />
             ))}   
           </div>
+
+          <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-700">Meta Title</label>
+          <input
+            name="metatitle"
+            type="text"
+            placeholder="Meta title"
+            value={blogData.metatitle}
+            onChange={handleChange}
+            className="w-full p-2 border border-gray-300 rounded"
+            required
+          />
+        </div>
+
+        
+          <div className="space-y-2">
+          <label className="block text-sm font-medium text-gray-700">Meta Description</label>
+          <input
+            name="metadescription"
+            type="text"
+            placeholder="Meta description"
+            value={blogData.metadescription}
+            onChange={handleChange}
+            className="w-full p-2 border border-gray-300 rounded"
+            required
+          />
+        </div>
         
         {/* Blog Title */}
         <div className="space-y-2">

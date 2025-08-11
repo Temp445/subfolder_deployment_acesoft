@@ -32,6 +32,8 @@ interface LocalizedContent {
 }
 
 interface BlogFormData {
+  metatitle: string;
+  metadescription: string;
   title: LocalizedString;
   author: string;
   description: LocalizedString;
@@ -43,6 +45,8 @@ interface BlogFormData {
 
 interface BlogData {
   id: string;
+  metatitle: string;
+  metadescription: string;
   title: LocalizedString | string;
   author: string;
   description: LocalizedString | string;
@@ -121,6 +125,8 @@ export default function BlogEdit() {
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
 
   const [formData, setFormData] = useState<BlogFormData>({
+    metatitle: '',
+    metadescription: '',
     title: { en: '' },
     author: '',
     description: { en: '' },
@@ -283,6 +289,8 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
         setActiveLanguages(Array.from(allLanguages));
 
         setFormData({
+          metatitle: blog.metatitle || '',
+          metadescription: blog.metadescription || '',
           title: normalizedTitle,
           author: blog.author || '',
           description: normalizedDescription,
@@ -384,9 +392,9 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
     setIsSubmitting(true);
     clearMessages();
 
-    const { title, author, description, products, category, content } = formData;
+    const { metatitle, metadescription, title, author, description, products, category, content } = formData;
 
-    if (!title.en?.trim() || !author.trim() || !description.en?.trim() || !products || !category.en?.trim()) {
+    if (!title.en?.trim() || !metatitle.trim() || !metadescription.trim() || !author.trim() || !description.en?.trim() || !products || !category.en?.trim()) {
       showMessage('All required fields must be filled.', true);
       setIsSubmitting(false);
       return;
@@ -394,6 +402,8 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
 
     try {
       const data = new FormData();
+      data.append('metatitle', metatitle.trim());
+      data.append('metadescription', metadescription.trim());
       data.append('author', author.trim());
       data.append('products', products);
       data.append('title', JSON.stringify(title));
@@ -548,6 +558,40 @@ const normalizeContentData = (data: LocalizedContent | object | string | undefin
               ))}
             </div>
           </div>
+        </div>
+
+         <div>
+          <label htmlFor="metatitle" className="block text-sm font-medium text-gray-700">
+            Meta Title *
+          </label>
+          <input
+            id="metatitle"
+            type="text"
+            name="metatitle"
+            value={formData.metatitle}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-50"
+            placeholder="Enter Meta title"
+          />
+        </div>
+
+         <div>
+          <label htmlFor="metadescription" className="block text-sm font-medium text-gray-700">
+            Meta Description *
+          </label>
+          <input
+            id="metadescription"
+            type="text"
+            name="metadescription"
+            value={formData.metadescription}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-50"
+            placeholder="Enter Meta description"
+          />
         </div>
 
         <div className="space-y-2">
