@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
 
   if (!product) {
     return {
-      title: 'Book Free Demo | ACE Software Solution',
+      title: 'Book Free Demo | ACE Software Solutions Pvt. Ltd',
       description: 'Book a free demo of our smart manufacturing software solutions. See how our tools can streamline your operations, improve productivity, and transform your business.',
 
     };

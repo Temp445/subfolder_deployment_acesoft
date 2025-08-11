@@ -13,22 +13,21 @@ import { GTM_ID } from '@/lib/gtm';
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL;
 
 export const metadata = {  
- title: {
-    default: 'ACE Software Solutions | Manufacturing Automation Tools',
-    template: '%s | ACE Software Solutions',
-  },
+ 
+  title: 'ACE Software Solutions Pvt. Ltd | Manufacturing Automation Tools',
   description: "Boost efficiency in manufacturing with smart software for CRM, project management, PPAP documentation, and CMS. Designed to streamline industrial workflows.",
-  keywords: "ACE Software Solution,ACE,CRM, Sales CRM, CRM software, Customer relationship management, CRM for small business, CRM solution, Cloud-based CRM, ACE CRM system, Lead management software, Best CRM tool, HRMS software, Human resource management system, HR software, Employee management software, Cloud HRMS, HR solution, Workforce management software, Payroll software, Payroll management system, HR and payroll software, Online payroll software, Payroll processing tool, Salary management software, Employee payroll system, Project management software, Project planning tool, Task tracking software, Team collaboration tool, Project scheduling software, Agile project management, Cloud project management, Task management software, Task tracking tool, Team task manager, Task collaboration software, Daily task management, Employee task management, PPAP software, Production part approval process, Automotive PPAP software, Quality documentation software, PPAP submission tool, Manufacturing PPAP software, Supplier PPAP solution, Digital PPAP process, Compliance documentation tool, Supplier documentation software, PPAP tracking system, Quality control software, Electronic PPAP system, Document control software, Calibration management software, Equipment calibration tracking, Instrument calibration tool, Calibration scheduling system, Calibration report software, Lab equipment management, Maintenance tracking tool, Production management software, Manufacturing PMS, Production scheduling tool, Factory management system, Manufacturing workflow software, Shop floor tracking system, Real-time production monitoring, Manufacturing execution system, Balloon drawing software, Drawing annotation tool, Engineering ballooning tool, Balloon numbering software, Quality control drawing tool, Digital drawing annotator, PDF ballooning software, CAD ballooning software, Engineering documentation tool, Fixed asset management software, Asset tracking software, Asset depreciation tool, Financial asset tracking, Enterprise asset management, Asset lifecycle management, Asset audit software, Fixed asset reporting tool, ERP software, Business ERP system, Enterprise resource planning, All-in-one ERP software, ERP for SMEs, Cloud-based ERP, Manufacturing ERP software, Accounting and inventory ERP, End-to-end ERP system",  openGraph: {
-    title: 'ACE Software Solutions',
+  keywords: "ACE Software Solution,ACE,CRM, Sales CRM, CRM software, Customer relationship management, CRM for small business, CRM solution, Cloud-based CRM, ACE CRM system, Lead management software, Best CRM tool, HRMS software, Human resource management system, HR software, Employee management software, Cloud HRMS, HR solution, Workforce management software, Payroll software, Payroll management system, HR and payroll software, Online payroll software, Payroll processing tool, Salary management software, Employee payroll system, Project management software, Project planning tool, Task tracking software, Team collaboration tool, Project scheduling software, Agile project management, Cloud project management, Task management software, Task tracking tool, Team task manager, Task collaboration software, Daily task management, Employee task management, PPAP software, Production part approval process, Automotive PPAP software, Quality documentation software, PPAP submission tool, Manufacturing PPAP software, Supplier PPAP solution, Digital PPAP process, Compliance documentation tool, Supplier documentation software, PPAP tracking system, Quality control software, Electronic PPAP system, Document control software, Calibration management software, Equipment calibration tracking, Instrument calibration tool, Calibration scheduling system, Calibration report software, Lab equipment management, Maintenance tracking tool, Production management software, Manufacturing PMS, Production scheduling tool, Factory management system, Manufacturing workflow software, Shop floor tracking system, Real-time production monitoring, Manufacturing execution system, Balloon drawing software, Drawing annotation tool, Engineering ballooning tool, Balloon numbering software, Quality control drawing tool, Digital drawing annotator, PDF ballooning software, CAD ballooning software, Engineering documentation tool, Fixed asset management software, Asset tracking software, Asset depreciation tool, Financial asset tracking, Enterprise asset management, Asset lifecycle management, Asset audit software, Fixed asset reporting tool, ERP software, Business ERP system, Enterprise resource planning, All-in-one ERP software, ERP for SMEs, Cloud-based ERP, Manufacturing ERP software, Accounting and inventory ERP, End-to-end ERP system", 
+   openGraph: { 
+    title: 'ACE Software Solutions Pvt. Ltd',
     description: 'Smart software tools for manufacturing – CRM, Project Management, CMS, and more.',
     url: `${domainUrl}`,
-    siteName: 'ACE Software Solutions',
+    siteName: 'ACE Software Solutions Pvt. Ltd',
     images: [
       {
         url: `${domainUrl}/og-images/AceLogo.png`,
         width: 1200,
         height: 630,
-        alt: 'ACE Software Solutions',
+        alt: 'ACE Software Solutions Pvt. Ltd',
       },
     ],
     type: 'website',

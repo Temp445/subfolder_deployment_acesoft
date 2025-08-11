@@ -143,7 +143,7 @@ import Image from 'next/image';
                   <li key={lang.code}>
                     <button
                      onClick={() => handleLocaleChange(lang.code)}
-                      className="flex items-center gap-2 px-2 py-1 text-sm text-gray-800 hover:bg-blue-50 hover:text-[#155E95] transition rounded"
+                      className="flex items-center gap-1 px-1 py-1 text-sm text-gray-800 hover:bg-blue-50 hover:text-[#155E95] transition rounded"
                     >
                       <span className={`fi fi-${lang.flag} w-7 h-5 block shadow-sm`} />
                       <span>{lang.label}</span>

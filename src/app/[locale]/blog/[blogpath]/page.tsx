@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ blogpath:
     };
   }
 
-  const title = blog.products || 'Blog | Ace Software Solutions';
+  const title = blog.products || 'Blog | Ace Software Solutions Pvt. Ltd';
   const description =  blog.title?.en || '';
   const image = blog.blogimage?.[0]
     ? `${apiUrl}/uploads/${blog.blogimage[0]}`

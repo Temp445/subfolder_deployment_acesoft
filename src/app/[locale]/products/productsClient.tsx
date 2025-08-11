@@ -129,8 +129,8 @@ const ProductsClient: React.FC = () => {
             <h1 className="text-xl sm:text-2xl  mt-2 text-gray-800">
             {t('Subtitle')}
           </h1>
-          <h2 className="text-xl sm:text-2xl mt-5 font-semibold border-b-2 rounded">{t('Title')}</h2>
-        
+          <h2 className="text-xl mt-5 font-semibold border-b-2 rounded">{t('Title')}</h2>
+
         </div>
 
         <div className="container mx-auto flex flex-col md:flex-row mb-20 sm:ml-2">

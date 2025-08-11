@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
 
   if (!product) {
     return {
-      title: 'Product | Ace Software Solution',
+      title: 'Products | Ace Software Solutions Pvt. Ltd',
       description: 'Explore powerful software solutions built for the manufacturing industry. Improve efficiency, streamline workflows, and ensure quality with our smart tools.',
     };
   }

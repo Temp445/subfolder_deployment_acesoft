@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productPa
 
   if (!product) {
     return {
-      title: 'Contact Us | Request Callback | Ace Software Solution',
+      title: 'Contact Us | Request Callback | Ace Software Solutions Pvt. Ltd',
       description: 'Contact us to find the right solution for your business. Our team will respond promptly to assist you with your enquiry.', 
       
     };

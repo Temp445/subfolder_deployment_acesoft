@@ -15,7 +15,7 @@ export default async (request: Request) => {
     },
     {
       pattern: new RegExp(`^(\/${langPattern})?\/products\/ace-project-management-software`),
-      targetBase: 'https://aceproject1.netlify.app'
+      targetBase: 'https://aceproject33.netlify.app'
     }
   ];
   
