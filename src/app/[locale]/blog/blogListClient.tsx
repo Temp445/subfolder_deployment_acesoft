@@ -246,7 +246,7 @@ export default function BlogList() {
                     alt={t(latestBlogs[0].title)}
                     className="w-full h-64 object-cover rounded-lg mb-4 clip-path:polygon(0_0,100%_0,100%_80%,0_100%)]"
                   />
-                  <h3 className="text-xl font-bold text-gray-800">{t(latestBlogs[0].title)}</h3>
+                  <h3 className="text-xl font-bold text-gray-800 line-clamp-2">{t(latestBlogs[0].title)}</h3>
                   <p className="text-gray-600 text-sm line-clamp-3 mt-2 ">{t(latestBlogs[0].description)}</p>
                   <Link
                     href={`/blog/${latestBlogs[0].blogpath}`}
@@ -264,7 +264,7 @@ export default function BlogList() {
                     key={blog._id}
                     className="bg-white/70 rounded shadow-xl p-2 hover:shadow-2xl transition"
                   >
-            <div className="flex flex-col md:flex-row hover:bg-yellow-300 rounded p-4 hover:shadow-2xl transition gap-4 group ">
+            <div className="flex flex-col hfull md:flex-row hover:bg-yellow-300 rounded p-4 hover:shadow-2xl transition gap-4 group ">
             
               <div className="w-full md:w-2/5 overflow-hidden rounded-lg flex-shrink-0">
                 <img
@@ -278,7 +278,7 @@ export default function BlogList() {
               <div className="w-full md:w-3/5 flex flex-col justify-between">
                 <div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 leading-snug">{blog.title && t(blog.title as LocalizedString)}</h3>
-                  <p className="text-gray-600 text-sm line-clamp-3">{blog.description && t(blog.description as LocalizedString)}</p>
+                  <p className="text-gray-600 text-sm line-clamp-4">{blog.description && t(blog.description as LocalizedString)}</p>
                 </div>
                 <Link
                   href={`/blog/${blog.blogpath}`}
