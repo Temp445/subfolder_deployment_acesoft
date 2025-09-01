@@ -23,7 +23,7 @@ const keywordRedirectMap: Record<string, string> = {
   // 'ppap': '/products/ace-profit-ppap',
   'fixed-asset-management': '/products/ace-fixed-asset-management-on-cloud',
   'hrms': '/products/ace-profit-stand-alone-hrms',
-  'erp': '/products/ace-profit-erp',
+  // 'erp': '/products/ace-profit-erp',
 
   // 'project': '/products/ace-project-management-software',
   'aceproject': '/products/ace-project-management-software',
@@ -109,7 +109,7 @@ export function middleware(request: NextRequest) {
 
   // Keyword redirect 
   const redirectTo = getRedirectFromKeyword(pathname);
-  if (redirectTo) {
+  if (redirectTo && pathname !== redirectTo) {
     console.log(`[middleware] Redirect keyword found → ${redirectTo}`);
     return NextResponse.redirect(new URL(redirectTo, request.url));
   }

@@ -1,4 +1,7 @@
+const axios = require('axios');
+
 const domainUrl = process.env.NEXT_PUBLIC_API_FRONTEND_URL || 'https://acesofts.netlify.app';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 const locales = ['en', 'fr', 'de', 'es', 'it', 'ja', 'zh', 'hi', 'br', 'kr', 'be', 'ru'];
 
@@ -23,7 +26,6 @@ const config = {
   additionalPaths: async (config) => {
     const paths = [];
 
-
     locales.forEach((locale) => {
       staticPaths.forEach((path) => {
         paths.push({
@@ -34,6 +36,27 @@ const config = {
         });
       });
     });
+
+    
+    try {
+      const blogRes = await axios.get(`${apiUrl}/api/blog`);
+      const blogs = blogRes.data || [];
+
+      blogs.forEach((blog) => {
+        locales.forEach((locale) => {
+          paths.push({
+            loc: `/${locale}/blog/${blog.blogpath}`,
+            changefreq: 'weekly',
+            priority: 0.8,
+            lastmod: blog.updatedAt
+              ? new Date(blog.updatedAt).toISOString()
+              : new Date().toISOString(),
+          });
+        });
+      });
+    } catch (err) {
+      console.error('Error fetching blogs for sitemap:', err.message);
+    }
 
     return paths;
   },
